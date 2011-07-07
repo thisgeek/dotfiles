@@ -1,4 +1,7 @@
+" Mimick TextMate's font
 :set guifont=Monaco:h13
+
+" Remove scrollbars
 :set guioptions-=L
 :set guioptions-=R
 :set guioptions-=l
