@@ -1,1 +1,5 @@
-set guifont=Monaco:h13
+:set guifont=Monaco:h13
+:set guioptions-=L
+:set guioptions-=R
+:set guioptions-=l
+:set guioptions-=r
