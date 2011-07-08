@@ -4,11 +4,3 @@ set softtabstop=4
 
 " Code folding
 set nofoldenable "don't fold by default
-
-" Switch split screens easily
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-
-set formatoptions=1
-set linebreak
-
