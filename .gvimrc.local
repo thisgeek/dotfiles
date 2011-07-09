@@ -6,3 +6,35 @@
 :set guioptions-=R
 :set guioptions-=l
 :set guioptions-=r
+
+" Prevent NerdTree from opening automatically
+function! ChangeDirectory(dir, ...)
+  execute "cd " . fnameescape(a:dir)
+  let stay = exists("a:1") ? a:1 : 1
+
+  if !stay
+    wincmd p
+  endif
+endfunction
+
+function! s:CdIfDirectory(directory)
+  let explicitDirectory = isdirectory(a:directory)
+  let directory = explicitDirectory || empty(a:directory)
+
+  if explicitDirectory
+    exe "cd " . fnameescape(a:directory)
+  endif
+
+  if strlen(a:directory) == 0
+    return
+  endif
+
+  if directory
+    wincmd p
+    bd
+  endif
+
+  if explicitDirectory
+    wincmd p
+  endif
+endfunction
