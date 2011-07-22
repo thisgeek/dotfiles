@@ -13,4 +13,6 @@ vim_plugin_task "vim-jquery-tmpl" do
 end
 
 # use my experimental javascript snippets
-sh "curl https://raw.github.com/thisgeek/snipmate-snippets/es5/snippets/javascript.snippets > snippets/javascript.snippets"
+vim_plugin_task "javascript-snippets" do
+	sh "curl https://raw.github.com/thisgeek/snipmate-snippets/es5/snippets/javascript.snippets > snippets/javascript.snippets"
+end
