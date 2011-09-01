@@ -1,4 +1,4 @@
-MANIFEST=janus.rake vimrc.local gvimrc.local
+MANIFEST=janus.rake vimrc.local gvimrc.local bash_profile
 
 all: janus
 	@@echo "Build completed:"
