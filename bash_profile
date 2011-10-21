@@ -33,3 +33,11 @@ export EDITOR='vim -f'
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+# Handy Functions
+
+# Combine VIM split panes with the power of find
+function vimf {
+    DEFAULT_PATH='.'
+    vim -O `find ${2-$DEFAULT_PATH} -name $1`
+}
