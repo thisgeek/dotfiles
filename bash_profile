@@ -10,6 +10,7 @@ export PATH=$PATH:/Applications/Gimp.app/Contents/Resources/bin
 export NODE_PATH=/usr/local/bin/node
 
 # Set the Java home to the Java Preferences default
+# To install Java 1.5 on Lion: http://www.s-seven.net/java_15_lion
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$JAVA_HOME/bin:$PATH
 
