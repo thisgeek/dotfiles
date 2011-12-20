@@ -1,10 +1,10 @@
-MANIFEST=janus.rake vimrc.local gvimrc.local bash_profile
+MANIFEST=janus.rake vimrc.local gvimrc.local bash_profile gitignore
 
-all: janus
+all: link
 	@@echo "Build completed:"
 	@@date
 
-janus:
+link:
 	@@for file in ${MANIFEST}; do \
 		ln -s `pwd`/$$file ~/.$$file; \
 	done;
