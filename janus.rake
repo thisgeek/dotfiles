@@ -1,6 +1,6 @@
 # add Freemarker syntax highlighting
 vim_plugin_task "ftl" do
-  sh "curl http://freemarker.sourceforge.net/download/editor/ftl.vim | sed 's|.$||' > syntax/ftl.vim"
+  sh "curl http://freemarker.sourceforge.net/download/editor/ftl.vim > syntax/ftl.vim"
   File.open(File.expand_path('../.vim/ftdetect/ftl.vim', __FILE__), 'w') do |file|
     file << "au BufNewFile,BufRead *.ftl        set ft=ftl"
   end
