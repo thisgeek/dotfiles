@@ -6,13 +6,12 @@ vim_plugin_task "ftl" do
   end
 end
 
-# add jQuery Template syntax highlighting
-vim_plugin_task "vim-jquery-tmpl" do
-  sh "curl https://raw.github.com/garbas/vim-jquery-tmpl/master/synx/jquerytmpl.vim > syntax/jquerytmpl.vim"
-  sh "curl https://raw.github.com/garbas/vim-jquery-tmpl/master/ftdetect/jquerytmpl.vim > ftdetect/jquerytmpl.vim"
+# add jsbeautify
+vim_plugin_task "jsbeautify" do
+  sh "curl http://www.vim.org/scripts/download_script.php?src_id=11120 > plugin/jsbeautify.vim"
 end
 
 # use my experimental javascript snippets
 vim_plugin_task "javascript-snippets" do
-	sh "curl https://raw.github.com/thisgeek/snipmate-snippets/es5/snippets/javascript.snippets > snippets/javascript.snippets"
+  sh "curl https://raw.github.com/thisgeek/snipmate-snippets/es5/snippets/javascript.snippets > snippets/javascript.snippets"
 end
