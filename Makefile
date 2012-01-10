@@ -1,4 +1,4 @@
-MANIFEST=janus.rake vimrc.local gvimrc.local bash_profile gitignore
+MANIFEST=vimrc.after gvimrc.after bash_profile gitignore
 
 all: link
 	@@echo "Build completed:"

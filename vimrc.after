@@ -8,3 +8,6 @@ set nofoldenable "don't fold by default
 " Take advantage of 256 color terminal
 set t_Co=256
 color tir_black
+
+" Turn on jshint errors by default
+let g:JSLintHighlightErrorLine = 1

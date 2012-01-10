@@ -38,3 +38,6 @@ function! s:CdIfDirectory(directory)
     wincmd p
   endif
 endfunction
+
+" Turn on jshint errors by default
+let g:JSLintHighlightErrorLine = 1
