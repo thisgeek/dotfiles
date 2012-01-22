@@ -12,5 +12,8 @@ color tir_black
 " Turn on jshint errors by default
 let g:JSLintHighlightErrorLine = 1
 
+" Integrate CSS Tidy (http://bit.ly/zi6Gy4)
+autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
+
 " Set the snipmate author name (Mac only)
 let g:snips_author = system('osascript -e "long user name of (system info)" 2>/dev/null')
