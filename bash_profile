@@ -3,11 +3,21 @@
 # Prefer homebrew installed software to the system's
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# Add node binaries to path
+export NODE_PATH=/usr/local/bin/node
+
+# Add pear binaries
+export PATH=$PATH:/opt/pear/bin
+
+# Application binaries
+
 # Add Gimp binaries (interactive batch mode does not work as expected)
 export PATH=$PATH:/Applications/Gimp.app/Contents/Resources/bin
 
-# Add node binaries to path
-export NODE_PATH=/usr/local/bin/node
+# Add Chromium
+export PATH=$PATH:/Applications/Chromium.app/Contents/MacOS
+
+# Java
 
 # Set the Java home to the Java Preferences default
 # To install Java 1.5 on Lion: http://www.s-seven.net/java_15_lion
