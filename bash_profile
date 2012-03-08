@@ -66,7 +66,12 @@ function sqlog {
            sqlfollow $2
        ;;
        *)
-           sqlfollow
+           if [ -z $1 ]; then
+               sqlfollow;
+           else
+               echo "Usage: sqlog (clear|follow)";
+               set -e;
+           fi
        ;;
     esac
 }
