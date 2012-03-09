@@ -15,5 +15,8 @@ let g:JSLintHighlightErrorLine = 1
 " Integrate CSS Tidy (http://bit.ly/zi6Gy4)
 autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
 
+" Clear the last used search pattern
+nmap <silent> <leader>hc :let @/ = ''<CR>
+
 " Set the snipmate author name (Mac only)
 let g:snips_author = system('osascript -e "long user name of (system info)" 2>/dev/null')
