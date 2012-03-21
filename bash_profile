@@ -14,9 +14,6 @@ export PATH=$PATH:/opt/pear/bin
 # Add Gimp binaries (interactive batch mode does not work as expected)
 export PATH=$PATH:/Applications/Gimp.app/Contents/Resources/bin
 
-# Add Chromium
-export PATH=$PATH:/Applications/Chromium.app/Contents/MacOS
-
 # Java
 
 # Set the Java home to the Java Preferences default
@@ -78,5 +75,43 @@ function sqlog {
                set -e;
            fi
        ;;
+    esac
+}
+
+# Chromium cli wrapper
+function chromium {
+    CHROMIUM_HOME=/Applications/Chromium.app/Contents
+    function chromium_update {
+        # Based on http://tcrn.ch/zZYFNq
+        ROOT_URL=http://commondatastorage.googleapis.com/chromium-browser-continuous/Mac
+        LATEST=`curl -s $ROOT_URL/LAST_CHANGE`
+        CURRENT=`ack -A1 SVNRevision $CHROMIUM_HOME/Info.plist | ack '<string>(.+)</string>' --output '$1'`
+
+        if [ $LATEST == $CURRENT ]; then
+            echo "You're up-to-date!"
+        else
+            curl -Lo /tmp/chrome-mac.zip $ROOT_URL/$LATEST/chrome-mac.zip
+
+            unzip -q /tmp/chrome-mac -d /tmp/
+
+            # Quit Chromium politely
+            osascript -e 'tell application "Chromium" to quit' 2>/dev/null
+
+            if [ -d /Applications/Chromium.app ]; then
+                rm -r /Applications/Chromium.app/
+            fi
+
+            mv /tmp/chrome-mac/Chromium.app/ /Applications/Chromium.app/
+            rm -rf /tmp/chrome-mac.zip /tmp/chrome-mac
+            open /Applications/Chromium.app
+        fi
+    }
+    case $1 in
+        update)
+            chromium_update
+        ;;
+        *)
+            $CHROMIUM_HOME/MacOS/Chromium $@
+        ;;
     esac
 }
