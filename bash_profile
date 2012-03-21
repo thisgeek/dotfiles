@@ -44,6 +44,11 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+# Handy aliases
+
+# Alias git root directory
+alias gittop='git rev-parse --show-toplevel'
+
 # Handy Functions
 
 # Combine VIM split panes with the power of find
