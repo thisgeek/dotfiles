@@ -54,30 +54,6 @@ function vimf {
     vim -O `find ${2-$DEFAULT_PATH} -name $1`
 }
 
-# Manage MySQL log
-function sqlog {
-    QUERYLOG=`awk '{ FS = "log="; print $2}' /etc/my.cnf | tail -n1`
-    function sqlfollow {
-        tail -f $QUERYLOG | grep ${1-Query}
-    }
-    case $1 in
-       clear)
-           echo '' > $QUERYLOG
-       ;;
-       follow)
-           sqlfollow $2
-       ;;
-       *)
-           if [ -z $1 ]; then
-               sqlfollow;
-           else
-               echo "Usage: sqlog (clear|follow)";
-               set -e;
-           fi
-       ;;
-    esac
-}
-
 # Chromium cli wrapper
 function chromium {
     CHROMIUM_HOME=/Applications/Chromium.app/Contents
