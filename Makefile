@@ -1,4 +1,4 @@
-MANIFEST=vimrc.after gvimrc.after bash_profile gitignore
+MANIFEST=vimrc.after vimrc.before gvimrc.after bash_profile gitignore
 
 all: link
 	@@echo "Build completed:"

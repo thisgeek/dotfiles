@@ -1,0 +1,3 @@
+if has("autocmd")
+  au BufRead,BufNewFile *.vm set ft=velocity
+endif
