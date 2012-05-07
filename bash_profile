@@ -85,4 +85,12 @@ function chromium {
             $CHROMIUM_HOME/MacOS/Chromium $@
         ;;
     esac
+#From http://vimeo.com/40929961
+
+# usage: chrome index.html
+function chrome () {
+    open $@ --args --allow-file-access-from-files
 }
+
+# useage: server
+alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
