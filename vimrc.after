@@ -20,3 +20,6 @@ nmap <silent> <leader>hc :let @/ = ''<CR>
 
 " Set the snipmate author name (Mac only)
 let g:snips_author = system('osascript -e "long user name of (system info)" 2>/dev/null')
+
+" Show hidden files in NERDTree
+let NERDTreeShowHidden = 1
