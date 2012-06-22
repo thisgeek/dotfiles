@@ -23,3 +23,6 @@ let g:snips_author = system('osascript -e "long user name of (system info)" 2>/d
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden = 1
+
+" Disable Ex mode shortcut
+:map Q <Nop>
