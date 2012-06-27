@@ -7,7 +7,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export NODE_PATH=/usr/local/bin/node
 
 # Add pear binaries
-export PATH=$PATH:/opt/pear/bin
+export PATH=$PATH:/usr/local/pear/bin
 
 # Application binaries
 
