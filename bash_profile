@@ -3,6 +3,9 @@
 # Prefer homebrew installed software to the system's
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# Add npm binaries
+export PATH=/usr/local/share/npm/bin:$PATH
+
 # Add node binaries to path
 export NODE_PATH=/usr/local/bin/node
 
