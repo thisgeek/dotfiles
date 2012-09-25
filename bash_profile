@@ -12,6 +12,12 @@ export NODE_PATH=/usr/local/bin/node
 # Add pear binaries
 export PATH=$PATH:/usr/local/pear/bin
 
+# Prefer locally installed npm packages to globals
+export PATH=./node_modules/.bin:$PATH
+
+# Prefer local project scripts to all paths
+export PATH=./scripts:$PATH
+
 # Application binaries
 
 # Add Gimp binaries (interactive batch mode does not work as expected)
