@@ -1,7 +1,5 @@
 if has("autocmd")
   autocmd BufRead,BufNewFile *.vm set syntax=vm filetype=vm
-endif
-
-if has("autocmd")
   autocmd BufRead,BufNewFile *.ftl set syntax=ftl filetype=ftl
+  autocmd BufRead,BufNewFile *.har set syntax=javascript filetype=javascript
 endif
