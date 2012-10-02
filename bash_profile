@@ -10,7 +10,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/bin/node
 
 # Add pear binaries
-export PATH=$PATH:/usr/local/pear/bin
+export PATH=/usr/local/pear/bin:$PATH
 
 # Prefer locally installed npm packages to globals
 export PATH=./node_modules/.bin:$PATH
