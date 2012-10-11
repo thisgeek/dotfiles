@@ -26,3 +26,6 @@ let NERDTreeShowHidden = 1
 
 " Disable Ex mode shortcut
 :map Q <Nop>
+
+" make private gists by default
+let g:gist_post_private = 1
