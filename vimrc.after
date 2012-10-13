@@ -9,9 +9,6 @@ set nofoldenable "don't fold by default
 set t_Co=256
 color tir_black
 
-" Turn on jshint errors by default
-let g:JSLintHighlightErrorLine = 1
-
 " Integrate CSS Tidy (http://bit.ly/zi6Gy4)
 autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
 
