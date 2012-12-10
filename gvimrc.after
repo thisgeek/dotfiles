@@ -10,6 +10,9 @@
 :set guioptions-=l
 :set guioptions-=r
 
+" Disable indent for text files
+au BufEnter *.txt set fo-=t
+
 " Prevent NerdTree from opening automatically
 function! ChangeDirectory(dir, ...)
   execute "cd " . fnameescape(a:dir)
