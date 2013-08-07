@@ -53,6 +53,10 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+# Help karma find phantomjs
+export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
+
+
 # Handy Functions
 
 # Combine VIM split panes with the power of find
