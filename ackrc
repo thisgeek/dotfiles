@@ -1,3 +1,4 @@
 --type-set=velocity=.vm
+--type-set=markdown=.markdown,.md
 --type-add
-css=.sass,.scss
+css=.sass,.scss,.less

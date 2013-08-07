@@ -2,6 +2,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" Read .md files as markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 " Code folding
 set nofoldenable "don't fold by default
 
