@@ -15,6 +15,9 @@ export PATH=/usr/local/pear/bin:$PATH
 # Prefer locally installed npm packages to globals
 export PATH=./node_modules/.bin:$PATH
 
+ # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin
+
 # Prefer local project scripts to all paths
 export PATH=./scripts:$PATH
 
