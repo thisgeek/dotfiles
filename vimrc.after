@@ -29,3 +29,6 @@ let NERDTreeShowHidden = 1
 
 " make private gists by default
 let g:gist_post_private = 1
+
+" bash style tab completion
+set wildmode=longest,list
