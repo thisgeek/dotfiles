@@ -13,9 +13,6 @@ set nofoldenable "don't fold by default
 set t_Co=256
 color tir_black
 
-" Integrate CSS Tidy (http://bit.ly/zi6Gy4)
-autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
-
 " Clear the last used search pattern
 nmap <silent> <leader>hc :let @/ = ''<CR>
 
