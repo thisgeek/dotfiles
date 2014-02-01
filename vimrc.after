@@ -1,6 +1,7 @@
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+" Set tabs to equal 2 spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 " Read .md files as markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
