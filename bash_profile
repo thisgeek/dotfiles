@@ -7,7 +7,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 
 # Add node binaries to path
-export NODE_PATH=/usr/local/bin/node
+export NPM_ROOT=/usr/local/share/npm/lib/node_modules
+export NODE_PATH=/usr/local/bin/node:$NPM_ROOT
 
 # Add pear binaries
 export PATH=/usr/local/pear/bin:$PATH
