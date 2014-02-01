@@ -74,5 +74,5 @@ function chrome () {
     open $@ --args --allow-file-access-from-files
 }
 
-# useage: server
+# Make any directory a server. Depends on open()
 alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
