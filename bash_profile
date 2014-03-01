@@ -62,7 +62,7 @@ export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
 # Combine VIM split panes with the power of find
 function vimf () {
     DEFAULT_PATH='.'
-    vim -O `find ${2-$DEFAULT_PATH} -name $1`
+    find ${2-$DEFAULT_PATH} -iname "$1" | xargs vim -O
 }
 
 #From http://vimeo.com/40929961
