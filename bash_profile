@@ -44,8 +44,6 @@ function javav {
 
 # Other Settings
 
-# JBoss
-# export JBOSS_HOME=/opt/jboss
 
 # Help SVN find the prefered text editor
 export EDITOR='vim -f'
