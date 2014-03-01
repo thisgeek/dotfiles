@@ -16,8 +16,8 @@ color tir_black
 " Clear the last used search pattern
 nmap <silent> <leader>hc :let @/ = ''<CR>
 
-" Set the snipmate author name (Mac only)
-let g:snips_author = system('osascript -e "long user name of (system info)" 2>/dev/null')
+" Set the snipmate author name
+let g:snips_author = system('git config --get user.name')
 
 " Show hidden files in NERDTree
 let NERDTreeShowHidden = 1
