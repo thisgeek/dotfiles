@@ -6,8 +6,8 @@ set softtabstop=2
 " Read .md files as markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
-" Code folding
-set nofoldenable "don't fold by default
+" Don't fold code by default
+set nofoldenable
 
 " Take advantage of 256 color terminal
 set t_Co=256
