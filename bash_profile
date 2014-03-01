@@ -20,7 +20,7 @@ export PATH=./node_modules/.bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
 
 # Prefer local project scripts to all paths
-export PATH=./bin:$PATH
+export PATH=./.bin:./bin:$PATH
 
 
 # Application binaries
