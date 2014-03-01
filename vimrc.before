@@ -3,3 +3,8 @@ if has("autocmd")
   autocmd BufRead,BufNewFile *.ftl set syntax=ftl filetype=ftl
   autocmd BufRead,BufNewFile *.har set syntax=javascript filetype=javascript
 endif
+
+call janus#disable_plugin('buffergator', 'Frequently opened accidentally')
+call janus#disable_plugin('endwise', 'Does not support languages I use often')
+call janus#disable_plugin('nerdtree', 'A crutch too much leaned on')
+call janus#disable_plugin('vroom', 'I rarely test ruby')
