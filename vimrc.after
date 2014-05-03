@@ -34,3 +34,7 @@ set wildmode=longest,list
 
 " Use a git listing for ctrlp index when inside a repository
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+
+" Insert only one space when joining lines that contain
+" sentence-terminating punctuation like `.`.
+set nojoinspaces
