@@ -19,6 +19,9 @@ export PATH=./node_modules/.bin:$PATH
  # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.rvm/bin
 
+# Add home scripts
+export PATH=$HOME/.bin:$PATH
+
 # Prefer local project scripts to all paths
 export PATH=./.bin:./bin:$PATH
 
@@ -35,15 +38,7 @@ export PATH=$PATH:/Applications/Gimp.app/Contents/Resources/bin
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$JAVA_HOME/bin:$PATH
 
-# Easily switch Java versions
-function javav {
-    ORIG_JAVA_HOME=$JAVA_HOME;
-    JAVA_HOME=$(/usr/libexec/java_home -v$1);
-    PATH=$(echo $PATH | sed -e "s;${ORIG_JAVA_HOME};${JAVA_HOME};");
-}
-
 # Other Settings
-
 
 # Help SVN find the prefered text editor
 export EDITOR='vim -f'
@@ -56,21 +51,3 @@ fi
 # Help karma find phantomjs
 export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
 
-
-# Handy Functions
-
-# Combine VIM split panes with the power of find
-function vimf () {
-    DEFAULT_PATH='.'
-    find ${2-$DEFAULT_PATH} -iname "$1" | xargs vim -O
-}
-
-#From http://vimeo.com/40929961
-
-# usage: chrome index.html
-function chrome () {
-    open $@ --args --allow-file-access-from-files
-}
-
-# Make any directory a server. Depends on open()
-alias server='open http://localhost:8000 && python -m SimpleHTTPServer'
