@@ -11,6 +11,7 @@ set nofoldenable
 
 " Take advantage of 256 color terminal
 set t_Co=256
+set background=dark
 color tir_black
 
 " Clear the last used search pattern
