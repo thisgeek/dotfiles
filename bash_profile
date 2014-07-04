@@ -46,3 +46,9 @@ fi
 
 # Help karma find phantomjs
 export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
+
+
+# Private
+
+# Load API keys
+if [ -f ~/.bash.keys ]; then . ~/.bash.keys; fi
