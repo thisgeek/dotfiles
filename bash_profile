@@ -16,9 +16,6 @@ export PATH=/usr/local/pear/bin:$PATH
 # Prefer locally installed npm packages to globals
 export PATH=./node_modules/.bin:$PATH
 
- # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.rvm/bin
-
 # Add home scripts
 export PATH=$HOME/.bin:$PATH
 
@@ -49,6 +46,3 @@ fi
 
 # Help karma find phantomjs
 export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
