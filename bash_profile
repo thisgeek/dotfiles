@@ -39,7 +39,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 # Help SVN find the prefered text editor
 export EDITOR='vim -f'
 
-# Add bash completion support for git
+# Add bash completion support for homebrew-managed tools
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
