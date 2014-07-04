@@ -36,7 +36,7 @@ set wildmode=longest,list
 cmap w!! %!sudo tee > /dev/null %
 
 " Use a git listing for ctrlp index when inside a repository
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
 
 " Insert only one space when joining lines that contain
 " sentence-terminating punctuation like `.`.
