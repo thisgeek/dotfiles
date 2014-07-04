@@ -1,5 +1,5 @@
 " Mimick TextMate's font
-:set guifont=Monaco:h13
+:set guifont=Monaco:h12
 
 " Deactivate toolbar
 :set guioptions-=T
