@@ -47,6 +47,8 @@ fi
 # Help karma find phantomjs
 export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
 
+# Enable extended globs
+shopt -s extglob
 
 # Private
 
