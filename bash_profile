@@ -34,14 +34,19 @@ export PATH=$PATH:/Applications/Gimp.app/Contents/Resources/bin
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$JAVA_HOME/bin:$PATH
 
+
 # Other Settings
 
 # Help SVN find the prefered text editor
 export EDITOR='vim -f'
 
+# Simplify prompt
+export PS1='\\W $ '
+
 # Add bash completion support for homebrew-managed tools
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
+  export PS1='\W $(__git_ps1 "%s ")\$ '
 fi
 
 # Help karma find phantomjs
@@ -49,6 +54,7 @@ export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
 
 # Enable extended globs
 shopt -s extglob
+
 
 # Private
 
