@@ -21,10 +21,10 @@ nmap <silent> <leader>hc :let @/ = ''<CR>
 let g:snips_author = system('git config --get user.name')
 
 " Disable autoindentation (http://bit.ly/IQKws0)
-:nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
+nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
 
 " Disable Ex mode shortcut
-:map Q <Nop>
+map Q <Nop>
 
 " make private gists by default
 let g:gist_post_private = 1
