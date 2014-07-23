@@ -41,7 +41,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 export EDITOR='vim -f'
 
 # Simplify prompt
-export PS1='\\W $ '
+export PS1='\W \$ '
 
 # Add bash completion support for homebrew-managed tools
 if [ -f `brew --prefix`/etc/bash_completion ]; then
