@@ -41,3 +41,8 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard
 " Insert only one space when joining lines that contain
 " sentence-terminating punctuation like `.`.
 set nojoinspaces
+
+" Load vimwiki configuration
+if filereadable(expand("~/.vimwikirc"))
+  source ~/.vimwikirc
+endif
