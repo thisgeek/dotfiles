@@ -14,9 +14,6 @@ set t_Co=256
 set background=dark
 color tir_black
 
-" Clear the last used search pattern
-nmap <silent> <leader>hc :let @/ = ''<CR>
-
 " Set the snipmate author name
 let g:snips_author = system('git config --get user.name')
 
@@ -32,9 +29,6 @@ let g:gist_post_private = 1
 " bash style tab completion
 set wildmode=longest,list
 
-" write to file as super user
-cmap w!! %!sudo tee > /dev/null %
-
 " Use a git listing for ctrlp index when inside a repository
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
 
@@ -46,3 +40,14 @@ set nojoinspaces
 if filereadable(expand("~/.vimwikirc"))
   source ~/.vimwikirc
 endif
+
+" Write to file as super user
+cmap w!! %!sudo tee > /dev/null %
+
+" Bring Space to your Leader
+let mapleader = "\<Space>"
+map <leader><space> <leader><leader>
+" TODO have \ do what spacebar use to do
+
+" Clear the last used search pattern
+nmap <silent> <leader>hc :let @/ = ''<CR>
