@@ -51,3 +51,6 @@ map <leader><space> <leader><leader>
 
 " Clear the last used search pattern
 nmap <silent> <leader>hc :let @/ = ''<CR>
+
+" Pretty print one-liner curl requests
+nmap <leader>cu :.s/ -H/\\\r -H/g<CR>
