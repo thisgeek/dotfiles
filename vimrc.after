@@ -54,3 +54,8 @@ nmap <silent> <leader>hc :let @/ = ''<CR>
 
 " Pretty print one-liner curl requests
 nmap <leader>cu :.s/ -H/\\\r -H/g<CR>
+
+" Shortcut common directory exploration commands
+nmap <leader>x :Ex<CR>
+nmap <leader>v :Vex<CR>
+nmap <leader>s :Sex<CR>
