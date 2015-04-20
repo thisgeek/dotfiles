@@ -57,7 +57,7 @@ cmap w!! %!sudo tee > /dev/null %
 " Bring Space to your Leader
 let mapleader = "\<Space>"
 map <leader><space> <leader><leader>
-" TODO have \ do what spacebar use to do
+" TODO have \ do what spacebar used to do
 
 " Clear the last used search pattern
 nmap <silent> <leader>hc :let @/ = ''<CR>
