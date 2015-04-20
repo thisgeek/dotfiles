@@ -47,7 +47,7 @@ endif
 " Add convenient command for formatting json
 function! Jsonify()
   %!json
-  set syntax=json
+  set filetype=json
 endfunction
 command! Jsonify :call Jsonify()
 
