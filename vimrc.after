@@ -69,3 +69,9 @@ nmap <leader>cu :.s/ -H/\\\r -H/g<CR>
 nmap <leader>x :Ex<CR>
 nmap <leader>v :Vex<CR>
 nmap <leader>s :Sex<CR>
+
+" Map K to query devdocs for javascript files as per the devdocs README
+augroup plugin-devdocs
+  autocmd!
+  autocmd FileType javascript nmap <buffer>K <Plug>(devdocs-under-cursor)
+augroup END
