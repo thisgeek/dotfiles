@@ -9,6 +9,9 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 " Limit text width for wiki files
 autocmd BufRead,BufNewFile *.wiki set textwidth=80
 
+" Enable jscs and jshint checking on javascript files
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+
 " Don't fold code by default
 set nofoldenable
 
