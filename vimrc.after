@@ -73,3 +73,10 @@ augroup plugin-devdocs
   autocmd!
   autocmd FileType javascript nmap <buffer>K <Plug>(devdocs-under-cursor)
 augroup END
+
+" Open the file bitbucket at the current line
+function! BrowseBitbucket()
+  let lineNumber = line(".")
+  execute '!stash browse browse % -l ' . lineNumber
+endfunction
+command! BB :call BrowseBitbucket()
