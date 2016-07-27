@@ -77,7 +77,7 @@ augroup END
 " Open the file bitbucket at the current line
 function! BrowseBitbucket()
   let projectRoot = fnamemodify(fugitive#extract_git_dir("%"), ":p:h:h")
-  let relativePath = fnamemodify("%", ":s?" . projectRoot . "??")
+  let relativePath = fnamemodify(expand("%"), ":s?" . projectRoot . "??")
   let lineNumber = line(".")
   execute '!stash browse browse ' . relativePath . ' -l ' . lineNumber . ' -b $(git rev-parse HEAD)'
 endfunction
