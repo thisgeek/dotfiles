@@ -82,3 +82,4 @@ function! BrowseBitbucket()
   execute '!stash browse browse ' . relativePath . ' -l ' . lineNumber . ' -b $(git rev-parse HEAD)'
 endfunction
 command! BB :call BrowseBitbucket()
+nmap <leader>bb :call BrowseBitbucket()<CR>
