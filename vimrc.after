@@ -71,7 +71,7 @@ nmap <leader>s :Sex<CR>
 " Map K to query devdocs for javascript files as per the devdocs README
 augroup plugin-devdocs
   autocmd!
-  autocmd FileType javascript nmap <buffer>K <Plug>(devdocs-under-cursor)
+  autocmd FileType javascript,html nmap <buffer>K <Plug>(devdocs-under-cursor)
 augroup END
 
 " Open the file bitbucket at the current line
