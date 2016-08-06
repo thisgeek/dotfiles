@@ -9,6 +9,13 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 " Limit text width for wiki files
 autocmd BufRead,BufNewFile *.wiki set textwidth=80
 
+" Disable automatic html syntax checking
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": ["html"] }
+" See also :help syntastic_quiet_messages or filter-overrides
+
 " Enable jscs and jshint checking on javascript files
 let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 
