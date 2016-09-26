@@ -55,6 +55,9 @@ shopt -s extglob
 # Set bash to vi mode
 set -o vi
 
+# Color grep
+export GREP_OPTIONS='--color=auto'
+
 
 # Private
 
