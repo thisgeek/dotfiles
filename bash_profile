@@ -52,6 +52,9 @@ export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
 # Enable extended globs
 shopt -s extglob
 
+# Set bash to vi mode
+set -o vi
+
 
 # Private
 
