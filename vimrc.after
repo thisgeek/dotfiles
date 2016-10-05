@@ -24,6 +24,8 @@ set nofoldenable
 
 " Take advantage of 256 color terminal
 set t_Co=256
+
+" Work in the dark
 set background=dark
 color tir_black
 
