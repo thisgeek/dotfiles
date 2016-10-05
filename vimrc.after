@@ -16,8 +16,8 @@ let g:syntastic_mode_map = {
     \ "passive_filetypes": ["html"] }
 " See also :help syntastic_quiet_messages or filter-overrides
 
-" Enable jscs and jshint checking on javascript files
-let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+" Enable jscs or jshint checking on javascript files
+autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
 
 " Don't fold code by default
 set nofoldenable
