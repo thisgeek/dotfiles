@@ -46,9 +46,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   export PS1='\W $(__git_ps1 "%s ")\$ '
 fi
 
-# Help karma find phantomjs
-export PHANTOMJS_BIN='/usr/local/bin/phantomjs'
-
 # Enable extended globs
 shopt -s extglob
 
