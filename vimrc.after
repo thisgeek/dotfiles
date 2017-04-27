@@ -96,3 +96,6 @@ nmap <leader>bb :call BrowseBitbucket()<CR>
 
 " Keep editor config from conflicting with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Allow jsx in js files
+let g:jsx_ext_required = 0
