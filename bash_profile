@@ -56,6 +56,8 @@ set -o vi
 # Color grep
 export GREP_OPTIONS='--color=auto'
 
+# Include iterm shell integration
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # Private
 
