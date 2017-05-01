@@ -94,6 +94,12 @@ endfunction
 command! BB :call BrowseBitbucket()
 nmap <leader>bb :call BrowseBitbucket()<CR>
 
+" Load project specific vimrc configurations
+" From http://www.ilker.de/specific-vim-settings-per-project.html
+" Not yet verified as working
+set exrc
+set secure
+
 " Keep editor config from conflicting with fugitive
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
