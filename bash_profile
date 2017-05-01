@@ -35,6 +35,9 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 # Other Settings
 
+# Identify as a development machine
+export NODE_ENV=development
+
 # Help SVN find the prefered text editor
 export EDITOR='vim -f'
 
