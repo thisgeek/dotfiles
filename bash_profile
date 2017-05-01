@@ -33,6 +33,12 @@ export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$JAVA_HOME/bin:$PATH
 
 
+# Private
+
+# Load API keys
+if [ -f ~/.bash.keys ]; then . ~/.bash.keys; fi
+
+
 # Other Settings
 
 # Identify as a development machine
@@ -59,7 +65,3 @@ export GREP_OPTIONS='--color=auto'
 # Include iterm shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# Private
-
-# Load API keys
-if [ -f ~/.bash.keys ]; then . ~/.bash.keys; fi
