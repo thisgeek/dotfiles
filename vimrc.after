@@ -17,6 +17,7 @@ let g:syntastic_mode_map = {
 " See also :help syntastic_quiet_messages or filter-overrides
 
 " Use eslint if available, otherwise use semistandard to lint JS
+" Note: this assumes you do not keep an eslintrc in your home directory
 let g:syntastic_javascript_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
 let g:syntastic_javascript_standard_exec = 'semistandard'
 
