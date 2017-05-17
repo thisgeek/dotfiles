@@ -62,6 +62,7 @@ if filereadable(expand("~/.vimwikirc"))
 endif
 
 " Add convenient command for formatting json
+" Requires: http://trentm.com/json/
 function! Jsonify()
   %!json
   set filetype=json
@@ -89,6 +90,9 @@ augroup plugin-devdocs
 augroup END
 
 " Browse the current file in bitbucket and scroll to the current line
+" Requires:
+" - https://bitbucket.org/atlassian/bitbucket-server-cli
+" - https://github.com/tpope/vim-fugitive
 function! BrowseBitbucket()
   let projectRoot = fnamemodify(fugitive#extract_git_dir("%"), ":p:h:h")
   let relativePath = fnamemodify(expand("%"), ":s?" . projectRoot . "??")
