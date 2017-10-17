@@ -34,6 +34,9 @@ set t_Co=256
 set background=dark
 color tir_black
 
+" Enable syntax highlighting for JSDocs
+let g:javascript_plugin_jsdoc = 1
+
 " Set the snipmate author name
 let g:snips_author = system('git config --get user.name')
 
