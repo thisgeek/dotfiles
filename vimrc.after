@@ -17,8 +17,7 @@ let g:syntastic_mode_map = {
 " See also :help syntastic_quiet_messages or filter-overrides
 
 " Use eslint if available, otherwise use semistandard to lint JS
-" Note: this assumes you do not keep an eslintrc in your home directory
-autocmd FileType javascript,javascript.jsx let g:syntastic_javascript_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['standard']
+autocmd FileType javascript,javascript.jsx let g:syntastic_javascript_checkers = glob('.eslintrc.*') != '' ? ['eslint'] : ['standard']
 let g:syntastic_javascript_standard_exec = 'semistandard'
 
 " Don't open error window automatically; close it when errors cease
