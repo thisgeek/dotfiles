@@ -104,10 +104,13 @@ endfunction
 command! BB :call BrowseBitbucket()
 nmap <leader>bb :call BrowseBitbucket()<CR>
 
-" Shortcut browsing in the repo hosting provider
-" Adds on to janus fugitive customizations
+" Add-ons to janus fugitive customizations
 " https://github.com/carlhuda/janus#git-support-fugitive
+
+" Shortcut browsing in the repo hosting provider
 nmap <leader>gh :Gbrowse<CR>
+" Shortcut to force push
+nmap <leader>gfp :Git push -f<CR>
 
 " Load project specific vimrc configurations
 " From http://www.ilker.de/specific-vim-settings-per-project.html
