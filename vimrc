@@ -114,6 +114,16 @@ set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
 ""
+"" Wild settings (Janus)
+""
+" Disable output and VCS files
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
+" Disable archive files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+" Disable temp and backup files
+set wildignore+=*.swp,*~,._*
+
+""
 "" Fugitive (Janus)
 ""
 nmap <leader>gb :Gblame<CR>
