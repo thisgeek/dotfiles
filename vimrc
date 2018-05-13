@@ -1,0 +1,224 @@
+" Bring Space to your Leader
+let mapleader = "\<Space>"
+
+if has("autocmd")
+  " autocmd BufRead,BufNewFile *.vm set syntax=vm filetype=vm
+  " autocmd BufRead,BufNewFile *.ftl set syntax=ftl filetype=ftl
+  autocmd BufRead,BufNewFile *.har set syntax=javascript filetype=javascript
+
+	" Read .md files as markdown
+	autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+	" Limit text width for wiki files
+	autocmd BufRead,BufNewFile *.wiki set textwidth=80
+endif
+
+" Set tabs to equal 2 spaces
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+" Don't fold code by default
+set nofoldenable
+" Insert only one space when joining lines that contain
+" sentence-terminating punctuation like `.`.
+set nojoinspaces
+
+""
+"" Install plugins
+""
+call plug#begin('~/.vim/plugged')
+	" Plug 'ahmedelgabri/vim-ava-snippets'
+	" Plug 'digitaltoad/vim-jade'
+	" Plug 'thisgeek/custom-snippets'
+	" Plug 'vim-scripts/applescript.vim'
+	Plug 'airblade/vim-gitgutter'
+	" Plug 'altercation/vim-colors-solarized'
+	Plug 'ap/vim-css-color'
+	" Plug 'blueshirts/darcula'
+	Plug 'bronson/vim-trailing-whitespace'
+	Plug 'chrisbra/csv.vim'
+	" Plug 'chrisbra/NrrwRgn'
+	Plug 'chriskempson/base16-vim'
+	" Plug 'chriskempson/vim-tomorrow-theme'
+	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'depuracao/vim-rdoc'
+	Plug 'editorconfig/editorconfig-vim'
+	Plug 'ervandew/supertab'
+	Plug 'freitass/todo.txt-vim'
+	" Plug 'garbas/vim-snipmate'
+	" Plug 'honza/vim-snippets'
+	"	Plug 'jeetsukumaran/vim-buffergator'
+	Plug 'junegunn/goyo.vim'
+	" Plug 'larssmit/vim-getafe'
+	Plug 'Lokaltog/vim-easymotion'
+	Plug 'majutsushi/tagbar'
+	Plug 'MarcWeber/vim-addon-mw-utils'
+	Plug 'mattn/gist-vim'
+	Plug 'mattn/webapi-vim'
+	Plug 'michaeljsmith/vim-indent-object'
+	Plug 'mileszs/ack.vim'
+	Plug 'mmalecki/vim-node.js'
+	Plug 'mtscout6/syntastic-local-eslint.vim'
+	Plug 'mxw/vim-jsx'
+	Plug 'othree/html5-syntax.vim'
+	" Plug 'patrickmcelwee/ftl-vim-syntax'
+	Plug 'Raimondi/delimitMate'
+	Plug 'rgarver/Kwbd.vim'
+	Plug 'rhysd/devdocs.vim'
+	Plug 'scrooloose/nerdcommenter'
+	" Plug 'scrooloose/nerdtree'
+	Plug 'sh-dude/ZoomWin'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'Shutnik/jshint2.vim'
+	Plug 'sjl/gundo.vim'
+	" Plug 'skalnik/vim-vroom'
+	" Plug 'sunaku/vim-ruby-minitest'
+	" Plug 'TechnoGate/janus-colors'
+	Plug 'telamon/vim-color-github'
+	Plug 'terryma/vim-multiple-cursors'
+	Plug 'thinca/vim-visualstar'
+	Plug 'tommcdo/vim-fubitive'
+	Plug 'tomtom/tlib_vim'
+	Plug 'tpope/vim-abolish'
+	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-dispatch'
+	" Plug 'tpope/vim-endwise'
+	Plug 'tpope/vim-eunuch'
+	Plug 'tpope/vim-fugitive'
+	Plug 'tpope/vim-pathogen'
+	Plug 'tpope/vim-ragtag'
+	" Plug 'tpope/vim-rails'
+	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-unimpaired'
+	Plug 'tpope/vim-vinegar'
+	" Plug 'tpope/vim-vividchalk'
+	" Plug 'twerth/ir_black'
+	Plug 'vim-scripts/Colour-Sampler-Pack'
+	" Plug 'vim-scripts/molokai'
+	" Plug 'vim-scripts/pyte'
+	Plug 'vim-scripts/tir_black'
+	Plug 'vim-scripts/vimwiki'
+	Plug 'vim-syntastic/syntastic'
+call plug#end()
+
+""
+"" Color
+""
+set t_Co=256 " Take advantage of 256 color terminal
+set background=dark " Work in the dark
+color tir_black
+
+""
+"" Searching (Janus)
+""
+set hlsearch    " highlight matches
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive...
+set smartcase   " ... unless they contain at least one capital letter
+
+""
+"" Fugitive Customizations (Janus)
+""
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gl :Glog<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gp :Git push<CR>
+" Shortcut browsing in the repo hosting provider
+nmap <leader>gh :Gbrowse<CR>
+" Shortcut to force push
+" TODO Avoid conflict with gf
+nmap <leader>gfp :Git push -f<CR>
+
+
+" Disable automatic html syntax checking
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": ["html"] }
+" See also :help syntastic_quiet_messages or filter-overrides
+
+" Use eslint if available, otherwise use semistandard to lint JS
+autocmd FileType javascript,javascript.jsx let g:syntastic_javascript_checkers = glob('.eslintrc.*') != '' ? ['eslint'] : ['standard']
+let g:syntastic_javascript_standard_exec = 'semistandard'
+
+" Don't open error window automatically; close it when errors cease
+let g:syntastic_auto_loc_list = 2
+
+" Enable syntax highlighting for JSDocs
+let g:javascript_plugin_jsdoc = 1
+
+" Disable autoindentation (http://bit.ly/IQKws0)
+nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
+
+" Disable Ex mode shortcut
+map Q <Nop>
+
+" make private gists by default
+let g:gist_post_private = 1
+
+" bash style tab completion
+set wildmode=longest,list
+
+" Use a git listing for ctrlp index when inside a repository
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
+
+" Load vimwiki configuration
+if filereadable(expand("~/.vimwikirc"))
+  source ~/.vimwikirc
+endif
+
+" Add convenient command for formatting json
+" Requires: http://trentm.com/json/
+function! Jsonify()
+  %!json
+  set filetype=json
+endfunction
+command! Jsonify :call Jsonify()
+
+" Write to file as super user
+cmap w!! %!sudo tee > /dev/null %
+
+" Clear the last used search pattern
+nmap <silent> <leader>hc :let @/ = ''<CR>
+
+" Pretty print one-liner curl requests
+nmap <leader>cu :.s/ -H/\\\r -H/g<CR>
+
+" Shortcut common directory exploration commands
+nmap <leader>x :Ex<CR>
+nmap <leader>v :Vex<CR>
+nmap <leader>s :Sex<CR>
+
+" Map K to query devdocs for javascript files as per the devdocs README
+augroup plugin-devdocs
+  autocmd!
+  autocmd FileType javascript,html nmap <buffer>K <Plug>(devdocs-under-cursor)
+augroup END
+
+" Browse the current file in bitbucket and scroll to the current line
+" Requires:
+" - https://bitbucket.org/atlassian/bitbucket-server-cli
+" - https://github.com/tpope/vim-fugitive
+function! BrowseBitbucket()
+  let projectRoot = fnamemodify(fugitive#extract_git_dir("%"), ":p:h:h")
+  let relativePath = fnamemodify(expand("%"), ":s?" . projectRoot . "??")
+  let lineNumber = line(".")
+  execute '!stash browse browse ' . relativePath . ' -l ' . lineNumber . ' -b $(git rev-parse HEAD)'
+endfunction
+command! BB :call BrowseBitbucket()
+nmap <leader>bb :call BrowseBitbucket()<CR>
+
+" Load project specific vimrc configurations
+" From http://www.ilker.de/specific-vim-settings-per-project.html
+" Not yet verified as working
+set exrc
+set secure
+
+" Keep editor config from conflicting with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Allow jsx in js files
+let g:jsx_ext_required = 0
