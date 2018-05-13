@@ -151,6 +151,9 @@ if filereadable(expand("~/.vimwikirc"))
   source ~/.vimwikirc
 endif
 
+" Keep diff markers up-to-date
+set updatetime=100
+
 " Enable syntax highlighting for JSDocs
 let g:javascript_plugin_jsdoc = 1
 
