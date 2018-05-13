@@ -190,11 +190,7 @@ cmap w!! %!sudo tee > /dev/null %
 " Clear the last used search pattern
 nmap <silent> <leader>hc :let @/ = ''<CR>
 
-" Pretty print one-liner curl requests
-nmap <leader>cu :.s/ -H/\\\r -H/g<CR>
-
 " Shortcut common directory exploration commands
-nmap <leader>x :Ex<CR>
 nmap <leader>v :Vex<CR>
 nmap <leader>s :Sex<CR>
 
@@ -203,19 +199,6 @@ augroup plugin-devdocs
   autocmd!
   autocmd FileType javascript,html nmap <buffer>K <Plug>(devdocs-under-cursor)
 augroup END
-
-" Browse the current file in bitbucket and scroll to the current line
-" Requires:
-" - https://bitbucket.org/atlassian/bitbucket-server-cli
-" - https://github.com/tpope/vim-fugitive
-function! BrowseBitbucket()
-  let projectRoot = fnamemodify(fugitive#extract_git_dir("%"), ":p:h:h")
-  let relativePath = fnamemodify(expand("%"), ":s?" . projectRoot . "??")
-  let lineNumber = line(".")
-  execute '!stash browse browse ' . relativePath . ' -l ' . lineNumber . ' -b $(git rev-parse HEAD)'
-endfunction
-command! BB :call BrowseBitbucket()
-nmap <leader>bb :call BrowseBitbucket()<CR>
 
 " Load project specific vimrc configurations
 " From http://www.ilker.de/specific-vim-settings-per-project.html
