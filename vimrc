@@ -173,10 +173,14 @@ set wildmode=longest,list
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
 
 " Add convenient command for formatting json
-" Requires: http://trentm.com/json/
+" Requires: https://stedolan.github.io/jq/
 function! Jsonify()
-  %!json
   set filetype=json
+  if executable("jq")
+    %!jq '.'
+  else
+    echom "jq not installed"
+  endif
 endfunction
 command! Jsonify :call Jsonify()
 
