@@ -136,8 +136,10 @@ nmap <leader>gp :Git push<CR>
 " Shortcut browsing in the repo hosting provider
 nmap <leader>gh :Gbrowse<CR>
 " Shortcut to force push
-" TODO Avoid conflict with gf
+" TODO Avoid conflict with gf?
 nmap <leader>gfp :Git push -f<CR>
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Keep editor config from conflicting with fugitive
 
 ""
 "" Syntastic
@@ -216,9 +218,6 @@ augroup END
 " Not yet verified as working
 set exrc
 set secure
-
-" Keep editor config from conflicting with fugitive
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " Allow jsx in js files
 let g:jsx_ext_required = 0
