@@ -202,8 +202,8 @@ cmap w!! %!sudo tee > /dev/null %
 nmap <silent> <leader>hc :let @/ = ''<CR>
 
 " Shortcut common directory exploration commands
-nmap <leader>v :Vex<CR>
-nmap <leader>s :Sex<CR>
+nmap <leader>ev :Vex<CR>
+nmap <leader>es :Sex<CR>
 
 " Map K to query devdocs for javascript files as per the devdocs README
 augroup plugin-devdocs
