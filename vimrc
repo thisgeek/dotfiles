@@ -19,6 +19,9 @@ if has("autocmd")
 
   " Limit text width for wiki files
   autocmd BufRead,BufNewFile *.wiki set textwidth=80
+
+  " Detect nginx configurations
+  au BufRead,BufNewFile */nginx/* set ft=nginx
 endif
 
 ""
@@ -55,6 +58,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ap/vim-css-color'
   Plug 'bronson/vim-trailing-whitespace'
   Plug 'c9s/tinyurl.vim'
+  Plug 'chr4/nginx.vim'
   Plug 'chrisbra/csv.vim'
   Plug 'chriskempson/base16-vim'
   Plug 'ctrlpvim/ctrlp.vim'
