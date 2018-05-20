@@ -50,6 +50,7 @@ set nofoldenable                " Don't fold code by default
 call plug#begin('~/.vim/plugged')
   " Plug 'sheerun/vim-polyglot'
   " Plug 'Shutnik/jshint2.vim'
+  Plug 'martinda/Jenkinsfile-vim-syntax'
   Plug 'airblade/vim-gitgutter'
   Plug 'ap/vim-css-color'
   Plug 'bronson/vim-trailing-whitespace'
@@ -72,6 +73,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'othree/html5.vim'
   Plug 'pangloss/vim-javascript'
+  Plug 'plasticboy/vim-markdown'
   Plug 'Raimondi/delimitMate'
   Plug 'rgarver/Kwbd.vim'
   Plug 'rhysd/devdocs.vim'
