@@ -48,6 +48,8 @@ set nofoldenable                " Don't fold code by default
 "" Install plugins
 ""
 call plug#begin('~/.vim/plugged')
+  " Plug 'sheerun/vim-polyglot'
+  " Plug 'Shutnik/jshint2.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'ap/vim-css-color'
   Plug 'bronson/vim-trailing-whitespace'
@@ -75,8 +77,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'rhysd/devdocs.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'sh-dude/ZoomWin'
-  " Plug 'sheerun/vim-polyglot'
-  " Plug 'Shutnik/jshint2.vim'
   Plug 'sjl/gundo.vim'
   Plug 'telamon/vim-color-github'
   Plug 'terryma/vim-multiple-cursors'
