@@ -74,7 +74,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'mileszs/ack.vim'
   Plug 'mmalecki/vim-node.js'
-  Plug 'mtscout6/syntastic-local-eslint.vim'
   Plug 'mxw/vim-jsx'
   Plug 'othree/html5.vim'
   Plug 'pangloss/vim-javascript'
@@ -103,7 +102,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-vinegar'
   Plug 'vim-scripts/tir_black'
   Plug 'vim-scripts/vimwiki'
-  Plug 'vim-syntastic/syntastic'
+  Plug 'w0rp/ale'
 call plug#end()
 
 ""
@@ -156,21 +155,6 @@ nmap <leader>gh :Gbrowse<CR>
 nmap <leader>gfp :Git push -f<CR>
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Keep editor config from conflicting with fugitive
-
-""
-"" Syntastic
-""
-" Disable automatic html syntax checking
-" See also :help syntastic_quiet_messages or filter-overrides
-let g:syntastic_mode_map = {
-    \ "mode": "active",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": ["html"] }
-" Use eslint if available, otherwise use semistandard to lint JS
-autocmd FileType javascript,javascript.jsx let g:syntastic_javascript_checkers = glob('.eslintrc.*') != '' ? ['eslint'] : ['standard']
-let g:syntastic_javascript_standard_exec = 'semistandard'
-" Don't open error window automatically; close it when errors cease
-let g:syntastic_auto_loc_list = 2
 
 ""
 "" Vimwiki
