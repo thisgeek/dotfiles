@@ -54,6 +54,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'ap/vim-css-color'
   Plug 'bronson/vim-trailing-whitespace'
+  Plug 'c9s/tinyurl.vim'
   Plug 'chrisbra/csv.vim'
   Plug 'chriskempson/base16-vim'
   Plug 'ctrlpvim/ctrlp.vim'
