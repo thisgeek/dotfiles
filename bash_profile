@@ -20,6 +20,8 @@ export PATH=$HOME/.bin:$PATH
 # Prefer local project scripts to all paths
 export PATH=./.bin:./bin:$PATH
 
+# Use homebrew's python
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 # Application binaries
 
