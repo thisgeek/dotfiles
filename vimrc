@@ -173,6 +173,13 @@ if filereadable(expand("~/.vimwikirc"))
   source ~/.vimwikirc
 endif
 
+""
+"" CtrlP
+""
+" Use a git listing for ctrlp index when inside a repository
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
+
+
 " Keep diff markers up-to-date
 set updatetime=100
 
@@ -190,9 +197,6 @@ let g:gist_post_private = 1
 
 " bash style tab completion
 set wildmode=longest,list
-
-" Use a git listing for ctrlp index when inside a repository
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
 
 " Add convenient command for formatting json
 " Requires: https://stedolan.github.io/jq/
