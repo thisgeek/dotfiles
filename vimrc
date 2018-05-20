@@ -127,6 +127,13 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*.swp,*~,._*
 
 ""
+"" Backup and swap files (Janus)
+""
+
+set backupdir^=~/.vim/_backup//    " where to put backup files.
+set directory^=~/.vim/_temp//      " where to put swap files.
+
+""
 "" Fugitive (Janus)
 ""
 nmap <leader>gb :Gblame<CR>
