@@ -130,6 +130,8 @@ set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " Disable temp and backup files
 set wildignore+=*.swp,*~,._*
+" Disable mac files
+set wildignore+=.DS_Store
 
 ""
 "" Backup and swap files (Janus)
