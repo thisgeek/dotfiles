@@ -231,3 +231,7 @@ set secure
 
 " Allow jsx in js files
 let g:jsx_ext_required = 0
+
+" Make vim break lines without breaking words
+" From http://vimcasts.org/episodes/soft-wrapping-text/
+command! -nargs=* Wrap set wrap linebreak nolist
