@@ -171,6 +171,12 @@ endif
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
 
 
+""
+"" ALE
+""
+let g:ale_linters = glob('.eslintrc.*') != '' ? { 'javascript': ['eslint'], } : { 'javascript': ['standard'], }
+let g:ale_javascript_standard_executable = 'semistandard'
+
 " Keep diff markers up-to-date
 set updatetime=100
 
