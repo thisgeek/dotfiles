@@ -28,6 +28,10 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 # Add Gimp binaries (interactive batch mode does not work as expected)
 export PATH=$PATH:/Applications/Gimp.app/Contents/Resources/bin
 
+# Cisco Anyconnect
+export PATH=$PATH:/opt/cisco/anyconnect/bin
+
+
 # Java
 
 # Set the Java home to the Java Preferences default
