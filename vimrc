@@ -10,7 +10,7 @@ syntax enable               " Turn on syntax highlighting allowing local overrid
 "" Identify Syntaxes
 ""
 if has("autocmd")
-  au BufRead,BufNewFile *.har set syntax=javascript filetype=javascript
+  au BufRead,BufNewFile *.har set syntax=json filetype=json
 
   " Make sure all markdown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} setf markdown
