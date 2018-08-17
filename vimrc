@@ -152,12 +152,14 @@ nmap <leader>gh :Gbrowse<CR>
 " Shortcut to force push
 " TODO Avoid conflict with gf?
 nmap <leader>gfp :Git push -f<CR>
+" TODO how to get current branch name
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Keep editor config from conflicting with fugitive
 
 ""
 "" Vimwiki
 ""
+"" TODO fix template path for primary wiki
 " Load vimwiki configuration
 if filereadable(expand("~/.vimwikirc"))
   source ~/.vimwikirc
