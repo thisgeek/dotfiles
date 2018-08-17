@@ -5,6 +5,7 @@ let mapleader = "\<Space>"  " Bring Space to your Leader
 set number                  " Show line numbers
 set ruler                   " Show line and column number
 syntax enable               " Turn on syntax highlighting allowing local overrides
+set wildmode=longest,list   " bash style tab completion
 
 ""
 "" Identify Syntaxes
@@ -45,6 +46,13 @@ set listchars+=precedes:<         " The character to show in the last column whe
                                   " off and the line continues beyond the left of the screen
 
 set nofoldenable                " Don't fold code by default
+
+" Make vim break lines without breaking words
+" From http://vimcasts.org/episodes/soft-wrapping-text/
+command! -nargs=* Wrap set wrap linebreak nolist
+
+" Disable autoindentation (http://bit.ly/IQKws0)
+nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
 
 ""
 "" Install plugins
@@ -134,7 +142,6 @@ set wildignore+=.DS_Store
 ""
 "" Backup and swap files (Janus)
 ""
-
 set backupdir^=~/.vim/_backup//    " where to put backup files.
 set directory^=~/.vim/_temp//      " where to put swap files.
 
@@ -154,7 +161,8 @@ nmap <leader>gh :Gbrowse<CR>
 nmap <leader>gfp :Git push -f<CR>
 " TODO how to get current branch name
 
-let g:EditorConfig_exclude_patterns = ['fugitive://.*'] " Keep editor config from conflicting with fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config from conflicting with fugitive
+let g:gist_post_private = 1                              " Make private gists by default
 
 ""
 "" Vimwiki
@@ -178,23 +186,17 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard
 let g:ale_linters = glob('.eslintrc.*') != '' ? { 'javascript': ['eslint'], } : { 'javascript': ['standard'], }
 let g:ale_javascript_standard_executable = 'semistandard'
 
-" Keep diff markers up-to-date
-set updatetime=100
+""
+"" Javascript
+""
+let g:javascript_plugin_jsdoc = 1    " Enable syntax highlighting for JSDocs
+let g:jsx_ext_required = 0           " Allow jsx in js files
 
-" Enable syntax highlighting for JSDocs
-let g:javascript_plugin_jsdoc = 1
-
-" Disable autoindentation (http://bit.ly/IQKws0)
-nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
-
-" Disable Ex mode shortcut
-map Q <Nop>
-
-" make private gists by default
-let g:gist_post_private = 1
-
-" bash style tab completion
-set wildmode=longest,list
+" Map K to query devdocs for javascript files as per the devdocs README
+augroup plugin-devdocs
+  autocmd!
+  autocmd FileType javascript,html nmap <buffer>K <Plug>(devdocs-under-cursor)
+augroup END
 
 " Add convenient command for formatting json
 " Requires: https://stedolan.github.io/jq/
@@ -208,6 +210,15 @@ function! Jsonify()
 endfunction
 command! Jsonify :call Jsonify()
 
+""
+"" Uncategorized
+""
+" Keep diff markers up-to-date
+set updatetime=100
+
+" Disable Ex mode shortcut
+map Q <Nop>
+
 " Write to file as super user
 cmap w!! %!sudo tee > /dev/null %
 
@@ -218,21 +229,8 @@ nmap <silent> <leader>hc :let @/ = ''<CR>
 nmap <leader>ev :Vex<CR>
 nmap <leader>es :Sex<CR>
 
-" Map K to query devdocs for javascript files as per the devdocs README
-augroup plugin-devdocs
-  autocmd!
-  autocmd FileType javascript,html nmap <buffer>K <Plug>(devdocs-under-cursor)
-augroup END
-
 " Load project specific vimrc configurations
 " From http://www.ilker.de/specific-vim-settings-per-project.html
 " Not yet verified as working
 set exrc
 set secure
-
-" Allow jsx in js files
-let g:jsx_ext_required = 0
-
-" Make vim break lines without breaking words
-" From http://vimcasts.org/episodes/soft-wrapping-text/
-command! -nargs=* Wrap set wrap linebreak nolist
