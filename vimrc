@@ -10,16 +10,14 @@ syntax enable               " Turn on syntax highlighting allowing local overrid
 "" Identify Syntaxes
 ""
 if has("autocmd")
-  " autocmd BufRead,BufNewFile *.vm set syntax=vm filetype=vm
-  " autocmd BufRead,BufNewFile *.ftl set syntax=ftl filetype=ftl
-  autocmd BufRead,BufNewFile *.har set syntax=javascript filetype=javascript
+  au BufRead,BufNewFile *.har set syntax=javascript filetype=javascript
 
   " Make sure all markdown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} setf markdown
   au FileType markdown setlocal wrap linebreak textwidth=72 nolist
 
   " Limit text width for wiki files
-  autocmd BufRead,BufNewFile *.wiki set textwidth=80
+  au BufRead,BufNewFile *.wiki set textwidth=80
 
   " Detect nginx configurations
   au BufRead,BufNewFile */nginx/* set ft=nginx
