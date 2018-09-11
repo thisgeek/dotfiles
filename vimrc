@@ -164,6 +164,14 @@ nmap <leader>gfp :Git push -f<CR>
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config from conflicting with fugitive
 let g:gist_post_private = 1                              " Make private gists by default
 
+" Clear the git gutter whenever a buffer leaves the window
+" Workaround for clearing the gutter after committing, for which fugitive
+" provides no event
+" Based on https://github.com/airblade/vim-gitgutter/issues/502#issuecomment-375887091
+if has("autocmd")
+  autocmd BufWinLeave * GitGutterAll
+endif
+
 ""
 "" Vimwiki
 ""
@@ -213,8 +221,6 @@ command! Jsonify :call Jsonify()
 ""
 "" Uncategorized
 ""
-" Keep diff markers up-to-date
-set updatetime=100
 
 " Disable Ex mode shortcut
 map Q <Nop>
