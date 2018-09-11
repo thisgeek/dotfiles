@@ -38,6 +38,9 @@ export PATH=$PATH:/opt/cisco/anyconnect/bin
 export JAVA_HOME=`/usr/libexec/java_home`
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # Private
 
