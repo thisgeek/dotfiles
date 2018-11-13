@@ -56,6 +56,7 @@ nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
 
 ""
 "" Install plugins
+"" See https://vimawesome.com for more
 ""
 call plug#begin('~/.vim/plugged')
   " Plug 'sheerun/vim-polyglot'
