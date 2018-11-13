@@ -107,7 +107,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-vinegar'
-  Plug 'vim-scripts/tir_black'
+  Plug 'cocopon/iceberg.vim'
   Plug 'vim-scripts/vimwiki'
   Plug 'w0rp/ale'
 call plug#end()
@@ -117,7 +117,7 @@ call plug#end()
 ""
 set t_Co=256 " Take advantage of 256 color terminal
 set background=dark " Work in the dark
-color tir_black
+color iceberg
 
 ""
 "" Searching (Janus)
