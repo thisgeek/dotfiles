@@ -1,4 +1,10 @@
 ""
+"" Flamenless Vim Configuration
+""
+"" A .vimrc that uses VimPlug and borrows heavily from Janus.
+""
+
+""
 "" Basic Setup
 ""
 let mapleader = "\<Space>"  " Bring Space to your Leader
