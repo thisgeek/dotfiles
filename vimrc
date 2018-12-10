@@ -226,6 +226,12 @@ endfunction
 command! Jsonify :call Jsonify()
 
 ""
+"" Ack
+""
+nmap <leader>f :Ack<space>
+nmap <leader>ff :AckFromSearch
+
+""
 "" Uncategorized
 ""
 
