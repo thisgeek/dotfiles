@@ -65,8 +65,6 @@ nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
 "" See https://vimawesome.com for more
 ""
 call plug#begin('~/.vim/plugged')
-  " Plug 'sheerun/vim-polyglot'
-  " Plug 'Shutnik/jshint2.vim'
   Plug 'airblade/vim-gitgutter'
   Plug 'alunny/pegjs-vim'
   Plug 'ap/vim-css-color'
