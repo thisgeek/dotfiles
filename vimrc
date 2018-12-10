@@ -68,6 +68,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'sheerun/vim-polyglot'
   " Plug 'Shutnik/jshint2.vim'
   Plug 'airblade/vim-gitgutter'
+  Plug 'alunny/pegjs-vim'
   Plug 'ap/vim-css-color'
   Plug 'arthurxavierx/vim-caser'
   Plug 'bronson/vim-trailing-whitespace'
