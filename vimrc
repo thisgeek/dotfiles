@@ -82,6 +82,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ervandew/supertab'
   Plug 'freitass/todo.txt-vim'
   Plug 'junegunn/goyo.vim'
+  Plug 'leafgarland/typescript-vim'
   Plug 'Lokaltog/vim-easymotion'
   Plug 'majutsushi/tagbar'
   Plug 'MarcWeber/vim-addon-mw-utils'
