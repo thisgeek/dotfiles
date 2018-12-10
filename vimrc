@@ -153,6 +153,19 @@ set backupdir^=~/.vim/_backup//    " where to put backup files.
 set directory^=~/.vim/_temp//      " where to put swap files.
 
 ""
+"" DelimitMate
+""
+augroup plugin-delimitMate
+  autocmd!
+  " Configure better trip-tic behavior for markdown
+  " Credit: https://github.com/Raimondi/delimitMate/issues/238#issuecomment-303674751
+  au FileType markdown let b:delimitMate_expand_cr = 2
+  au FileType markdown let b:delimitMate_expand_inside_quotes = 1
+  au FileType markdown let b:delimitMate_expand_space = 0
+  au FileType markdown let b:delimitMate_nesting_quotes = ['`']
+augroup END
+
+""
 "" Fugitive (Janus)
 ""
 nmap <leader>gb :Gblame<CR>
