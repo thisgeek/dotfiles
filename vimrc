@@ -259,3 +259,6 @@ nmap <leader>es :Sex<CR>
 " Not yet verified as working
 set exrc
 set secure
+
+" Open with
+nmap <leader>oo :!open %<CR>
