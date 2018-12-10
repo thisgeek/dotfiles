@@ -254,11 +254,5 @@ nmap <silent> <leader>hc :let @/ = ''<CR>
 nmap <leader>ev :Vex<CR>
 nmap <leader>es :Sex<CR>
 
-" Load project specific vimrc configurations
-" From http://www.ilker.de/specific-vim-settings-per-project.html
-" Not yet verified as working
-set exrc
-set secure
-
 " Open with
 nmap <leader>oo :!open %<CR>
