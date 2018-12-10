@@ -67,7 +67,6 @@ nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
 call plug#begin('~/.vim/plugged')
   " Plug 'sheerun/vim-polyglot'
   " Plug 'Shutnik/jshint2.vim'
-  Plug 'martinda/Jenkinsfile-vim-syntax'
   Plug 'airblade/vim-gitgutter'
   Plug 'ap/vim-css-color'
   Plug 'arthurxavierx/vim-caser'
@@ -76,6 +75,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'chr4/nginx.vim'
   Plug 'chrisbra/csv.vim'
   Plug 'chriskempson/base16-vim'
+  Plug 'cocopon/iceberg.vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ervandew/supertab'
@@ -84,6 +84,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'Lokaltog/vim-easymotion'
   Plug 'majutsushi/tagbar'
   Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'martinda/Jenkinsfile-vim-syntax'
   Plug 'mattn/gist-vim'
   Plug 'mattn/webapi-vim'
   Plug 'michaeljsmith/vim-indent-object'
@@ -114,7 +115,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-vinegar'
-  Plug 'cocopon/iceberg.vim'
   Plug 'vim-scripts/vimwiki'
   Plug 'w0rp/ale'
 call plug#end()
