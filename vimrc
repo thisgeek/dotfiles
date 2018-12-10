@@ -229,6 +229,9 @@ command! Jsonify :call Jsonify()
 "" Uncategorized
 ""
 
+" Y should logically yank to end of line
+map Y y$
+
 " Disable Ex mode shortcut
 map Q <Nop>
 
