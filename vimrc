@@ -209,7 +209,6 @@ endif
 ""
 " Use a git listing for ctrlp index when inside a repository
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
-let g:ctrlp_map = '<leader>pp'
 nmap <leader>pb :CtrlPBuffer<CR>
 
 ""
