@@ -189,7 +189,10 @@ let g:gist_post_private = 1                              " Make private gists by
 " provides no event
 " Based on https://github.com/airblade/vim-gitgutter/issues/502#issuecomment-375887091
 if has("autocmd")
-  autocmd BufWinLeave * GitGutterAll
+  augroup plugin-gitGutter
+    autocmd!
+    autocmd BufWinLeave * GitGutterAll
+  augroup END
 endif
 
 ""
