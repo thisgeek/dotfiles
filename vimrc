@@ -257,9 +257,6 @@ map Y y$
 " Disable Ex mode shortcut
 map Q <Nop>
 
-" Write to file as super user
-cmap w!! %!sudo tee > /dev/null %
-
 " Clear the last used search pattern
 nmap <silent> <leader>hc :let @/ = ''<CR>
 
