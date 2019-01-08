@@ -266,3 +266,8 @@ nmap <leader>es :Sex<CR>
 
 " Open with
 nmap <leader>oo :!open %<CR>
+
+" Safely permit netrw to remove non-empty local directories
+" Depends on https://hasseg.org/trash/ or
+" https://github.com/andreafrancia/trash-cli
+let g:netrw_localrmdir='trash'
