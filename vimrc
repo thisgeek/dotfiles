@@ -214,7 +214,14 @@ nmap <leader>pb :CtrlPBuffer<CR>
 ""
 "" ALE
 ""
-let g:ale_linters = glob('.eslintrc.*') != '' ? { 'javascript': ['eslint','flow'], } : { 'javascript': ['standard','flow'], }
+if glob('.eslintrc.*') != ''
+  let g:ale_linters = { 'javascript': ['eslint','flow'], }
+elseif glob('.prettierrc.js') != ''
+  let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'] }
+  let g:ale_fix_on_save = 1
+else
+  let g:ale_linters = { 'javascript': ['standard','flow'], }
+endif
 let g:ale_javascript_standard_executable = 'semistandard'
 
 ""
