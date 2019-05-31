@@ -87,10 +87,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'martinda/Jenkinsfile-vim-syntax'
   Plug 'mattn/gist-vim'
   Plug 'mattn/webapi-vim'
+  Plug 'maxmellon/vim-jsx-pretty'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'mileszs/ack.vim'
   Plug 'mmalecki/vim-node.js'
-  Plug 'mxw/vim-jsx'
   Plug 'othree/html5.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'plasticboy/vim-markdown'
@@ -228,7 +228,7 @@ let g:ale_javascript_standard_executable = 'semistandard'
 "" Javascript
 ""
 let g:javascript_plugin_jsdoc = 1    " Enable syntax highlighting for JSDocs
-let g:jsx_ext_required = 0           " Allow jsx in js files
+let g:vim_jsx_pretty_highlight_close_tag = 1 " Highlight the close tag separately from the open tag
 
 " Map K to query devdocs for javascript files as per the devdocs README
 augroup plugin-devdocs
