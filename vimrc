@@ -112,6 +112,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-pathogen'
   Plug 'tpope/vim-ragtag'
   Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-vinegar'
@@ -174,11 +175,15 @@ nmap <leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gp :Git push<CR>
+
 " Shortcut browsing in the repo hosting provider
 nmap <leader>gh :Gbrowse<CR>
-" Shortcut to force push
+vmap <leader>gh :Gbrowse<CR>
+
+" Shortcut to push and force push
 " TODO Avoid conflict with gf?
 nmap <leader>gfp :Git push -f<CR>
+
 " TODO how to get current branch name
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config from conflicting with fugitive
