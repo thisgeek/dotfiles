@@ -224,6 +224,9 @@ else
 endif
 let g:ale_javascript_standard_executable = 'semistandard'
 
+map <unique> <Leader>ad  <Plug>(ale_go_to_definition)
+map <unique> <Leader>af  <Plug>(ale_find_references)
+
 ""
 "" Javascript
 ""
