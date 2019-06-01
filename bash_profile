@@ -23,6 +23,9 @@ export PATH=./.bin:./bin:$PATH
 # Use homebrew's python
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
+# Yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
 # Application binaries
 
 # Add Gimp binaries (interactive batch mode does not work as expected)
