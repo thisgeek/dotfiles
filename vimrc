@@ -281,3 +281,9 @@ nmap <leader>oo :!open %<CR>
 " Depends on https://hasseg.org/trash/ or
 " https://github.com/andreafrancia/trash-cli
 let g:netrw_localrmdir='trash'
+
+" https://stackoverflow.com/a/1675752/199644
+" Set up characters for displaying whitespace.
+" Turn on with :set list. Off with :set nolist
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.
+set nolist
