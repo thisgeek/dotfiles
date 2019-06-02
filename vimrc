@@ -28,6 +28,8 @@ if has("autocmd")
 
   " Detect nginx configurations
   au BufRead,BufNewFile */nginx/* set ft=nginx
+
+  au BufRead,BufNewFile *.sshconfig set ft=sshconfig
 endif
 
 ""
