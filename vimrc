@@ -174,8 +174,11 @@ augroup END
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
-nmap <leader>gl :Glog<CR>
 nmap <leader>gc :Gcommit<CR>
+
+" Shortcut to load commit history in quickfix
+nmap <leader>gl :Glog<CR>
+vmap <leader>gl :Glog<CR>
 
 " Shortcut browsing in the repo hosting provider
 nmap <leader>gh :Gbrowse<CR>
