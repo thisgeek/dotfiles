@@ -278,7 +278,8 @@ map Y y$
 map Q <Nop>
 
 " Clear the last used search pattern
-nmap <silent> <leader>hc :let @/ = ''<CR>
+command ClearSearch let @/ = ''
+nmap <silent> <leader>hc :ClearSearch<CR>
 
 " Shortcut common directory exploration commands
 nmap <leader>ev :Vex<CR>
