@@ -189,6 +189,10 @@ nmap <leader>gp :Git push<CR>
 " TODO Avoid conflict with gf?
 nmap <leader>gfp :Git push -f<CR>
 
+" Shortcut for saving the current branch to origin
+command GSetUpstream execute "Git push -u origin" FugitiveHead()
+nmap <leader>gsu :GSetUpstream<CR>
+
 " TODO how to get current branch name
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config from conflicting with fugitive
