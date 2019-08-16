@@ -227,8 +227,16 @@ else
 endif
 let g:ale_javascript_standard_executable = 'semistandard'
 
-map <unique> <Leader>ad  <Plug>(ale_go_to_definition)
-map <unique> <Leader>af  <Plug>(ale_find_references)
+" Use tsserver to support ALEGoToDefinition in all javascript
+if executable("tsserver") " TODO npx tsserver?
+  let g:ale_completion_enabled = 1
+else
+  echom "tsserver not installed"
+endif
+
+nmap <Leader>ad  <Plug>(ale_go_to_definition)
+nmap <Leader>af  <Plug>(ale_find_references)
+" TODO Map keys to go to definition in split (or vsplit)
 
 ""
 "" Javascript
