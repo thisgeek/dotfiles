@@ -299,3 +299,15 @@ let g:netrw_localrmdir='trash'
 " Turn on with :set list. Off with :set nolist
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:.
 set nolist
+
+" From https://vi.stackexchange.com/a/16083/22505
+" Delete all Git conflict markers
+" Creates the command :GremoveConflictMarkers
+function! RemoveConflictMarkers() range
+  echom a:firstline.'-'.a:lastline
+  " TODO Does the regex pattern account for names in the markers? Probably
+  " deletes the whole line for any partial match.
+  execute a:firstline.','.a:lastline . ' g/^<\{7}\|^|\{7}\|^=\{7}\|^>\{7}/d'
+endfunction
+"-range=% default is whole file
+command! -range=% GremoveConflictMarkers <line1>,<line2>call RemoveConflictMarkers()
