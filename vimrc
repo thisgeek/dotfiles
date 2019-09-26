@@ -265,8 +265,11 @@ command! Jsonify :call Jsonify()
 ""
 "" Ack
 ""
-nmap <leader>f :Ack<space>
-nmap <leader>ff :AckFromSearch
+" Temporary workaround for missing ack support
+command! -nargs=+ Thpt :set splitbelow | new | r!ack <args>
+nmap <leader>f :Thpt<space>
+" Disabled while Ack fails to play nice with neovim
+" nmap <leader>ff :AckFromSearch
 
 ""
 "" Uncategorized
