@@ -96,7 +96,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/webapi-vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'michaeljsmith/vim-indent-object'
-  Plug 'mileszs/ack.vim'
+  " TODO Async support
+  " https://github.com/mileszs/ack.vim/pull/239
+  " https://github.com/mileszs/ack.vim/issues/209
+  " https://github.com/prabirshrestha/async.vim
+  " https://github.com/mileszs/ack.vim/pull/247
+  " Plug 'mileszs/ack.vim'
   Plug 'mmalecki/vim-node.js'
   Plug 'othree/html5.vim'
   Plug 'pangloss/vim-javascript'
@@ -268,13 +273,16 @@ endfunction
 command! Jsonify :call Jsonify()
 
 ""
-"" Ack
+"" Ken
 ""
-" Temporary workaround for missing ack support
-command! -nargs=+ Thpt :set splitbelow | new | r!ack <args>
-nmap <leader>f :Thpt<space>
-" Disabled while Ack fails to play nice with neovim
-" nmap <leader>ff :AckFromSearch
+"" Convenient mappings for vimgrep, the search tool based on grep authored by Ken Thomposon
+command! -nargs=+ Ken :noautocmd vimgrep <args> | copen 10
+nmap <leader>f :Ken<space>
+" TODO Automatically open quickfix list instead of having to type :cw after
+" (with :copen ?)
+" TODO Understand implied directories
+" TODO Handle arg splitting with <f-args>: https://vi.stackexchange.com/a/12132/22505
+" Ref: https://vim.fandom.com/wiki/Find_in_files_within_Vim
 
 ""
 "" Uncategorized
