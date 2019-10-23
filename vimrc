@@ -64,7 +64,8 @@ set nofoldenable                " Don't fold code by default
 command! -nargs=* Wrap set wrap linebreak nolist
 
 " Disable autoindentation (http://bit.ly/IQKws0)
-nmap <silent> <leader>ii :setl noai nocin nosi inde=<CR>
+command DisableAutoIndent setl noai nocin nosi inde=
+nmap <silent> <leader>ii :DisableAutoIndent<CR>
 
 ""
 "" Install plugins
