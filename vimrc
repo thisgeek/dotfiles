@@ -30,6 +30,10 @@ if has("autocmd")
   au BufRead,BufNewFile */nginx/* set ft=nginx
 
   au BufRead,BufNewFile *.sshconfig set ft=sshconfig
+
+  au BufRead,BufNewFile dockerfile set ft=dockerfile
+
+  au BufRead,BufNewFile *.tsx set ft=typescript
 endif
 
 ""
