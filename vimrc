@@ -241,7 +241,7 @@ let g:ale_javascript_standard_executable = 'semistandard'
 if executable("tsserver") " TODO npx tsserver?
   let g:ale_completion_enabled = 1
 else
-  echom "tsserver not installed"
+  " echom "tsserver not installed"
 endif
 
 nmap <Leader>ad  <Plug>(ale_go_to_definition)
