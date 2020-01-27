@@ -81,11 +81,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'chr4/nginx.vim'
   Plug 'chrisbra/csv.vim'
   Plug 'chriskempson/base16-vim'
+  Plug 'clojure-vim/async-clj-omni'
+  " TODO Swich to radenling/vim-dispatch-neovim
+  " Alternative to jack-in
+  " Plug 'tpope/salve'
   Plug 'cocopon/iceberg.vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ervandew/supertab'
   Plug 'freitass/todo.txt-vim'
+  Plug 'guns/vim-sexp'
+  " Alternative to Parens vim-sexp
+  " Plug 'eraserhd/parinfer-rust'
   Plug 'junegunn/goyo.vim'
   Plug 'leafgarland/typescript-vim'
   Plug 'Lokaltog/vim-easymotion'
@@ -110,7 +117,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'rgarver/Kwbd.vim'
   Plug 'rhysd/devdocs.vim'
   Plug 'scrooloose/nerdcommenter'
+  Plug 'SevereOverfl0w/vim-replant', { 'do': ':UpdateRemotePlugins' }
   Plug 'sh-dude/ZoomWin'
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+  endif
+  " Alternative to deoplete
+  " Plug 'neoclide/coc.nvim'
   Plug 'sjl/gundo.vim'
   Plug 'telamon/vim-color-github'
   Plug 'terryma/vim-multiple-cursors'
@@ -119,7 +132,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomtom/tlib_vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-dispatch'
+  if has('nvim')
+    Plug 'radenling/vim-dispatch-neovim'
+  endif
   Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-fireplace'
+  " 'Modern' alternative REPL to fireplace
+  " Plug 'Olical/conjure'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-pathogen'
   Plug 'tpope/vim-ragtag'
@@ -283,6 +302,19 @@ nmap <leader>f :Ken<space>
 " TODO Understand implied directories
 " TODO Handle arg splitting with <f-args>: https://vi.stackexchange.com/a/12132/22505
 " Ref: https://vim.fandom.com/wiki/Find_in_files_within_Vim
+
+""
+"" Clojure
+""
+" Largely borrowed from https://soundcloud.com/user-959992602/s2-e8-vim-setup-with-dominic-monroe
+
+" Deolete-based autocompletion
+" TODO Detect python3 dependency. See https://github.com/Shougo/deoplete.nvim#requirements
+" Auto enable deoplete
+let g:deoplete#enable_at_startup = 1
+" async-clj-omni with deoplete
+call deoplete#custom#option('keyword_patterns', {'clojure': '[\w!$%&*+/:<=>?@\^_~\-\.#]*'})
+
 
 ""
 "" Uncategorized
