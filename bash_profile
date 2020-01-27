@@ -1,3 +1,8 @@
+# zsh
+
+# Why not both?
+# Consider: https://superuser.com/questions/187639/zsh-not-hitting-profile
+
 # PATH
 
 # Prefer homebrew installed software to the system's
@@ -17,6 +22,7 @@ export PATH=./.bin:./bin:$PATH
 
 
 # Go
+export GO111MODULE=on
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
@@ -25,6 +31,9 @@ export PATH=$PATH:$GOPATH/bin
 # Load API keys
 # if [ -f ~/.bash.keys ]; then . ~/.bash.keys; fi
 
+# Aliases
+
+alias nv=nvim
 
 # Other Settings
 
@@ -32,10 +41,10 @@ export PATH=$PATH:$GOPATH/bin
 export PS1='\W \$ '
 
 # Add bash completion support for homebrew-managed tools
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-  export PS1='\W $(__git_ps1 "%s ")\$ '
-fi
+# if [ -f `brew --prefix`/etc/bash_completion ]; then
+#   . `brew --prefix`/etc/bash_completion
+#   export PS1='\W $(__git_ps1 "%s ")\$ '
+# fi
 
 # Enable extended globs
 # shopt -s extglob
@@ -47,4 +56,4 @@ set -o vi
 export GREP_OPTIONS='--color=auto'
 
 # Include iterm shell integration
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+# test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
