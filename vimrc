@@ -103,12 +103,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/webapi-vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'michaeljsmith/vim-indent-object'
-  " TODO Async support
-  " https://github.com/mileszs/ack.vim/pull/239
-  " https://github.com/mileszs/ack.vim/issues/209
-  " https://github.com/prabirshrestha/async.vim
-  " https://github.com/mileszs/ack.vim/pull/247
-  " Plug 'mileszs/ack.vim'
+  Plug 'iamFIREcracker/ack.vim', { 'branch': 'async-support' }
   Plug 'mmalecki/vim-node.js'
   Plug 'othree/html5.vim'
   Plug 'pangloss/vim-javascript'
@@ -292,16 +287,10 @@ endfunction
 command! Jsonify :call Jsonify()
 
 ""
-"" Ken
+"" Ack
 ""
-"" Convenient mappings for vimgrep, the search tool based on grep authored by Ken Thomposon
-command! -nargs=+ Ken :noautocmd vimgrep <args> | copen 10
-nmap <leader>f :Ken<space>
-" TODO Automatically open quickfix list instead of having to type :cw after
-" (with :copen ?)
-" TODO Understand implied directories
-" TODO Handle arg splitting with <f-args>: https://vi.stackexchange.com/a/12132/22505
-" Ref: https://vim.fandom.com/wiki/Find_in_files_within_Vim
+nmap <leader><leader> :AckFromSearch<space>
+
 
 ""
 "" Clojure
