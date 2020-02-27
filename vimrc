@@ -96,6 +96,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/goyo.vim'
   Plug 'leafgarland/typescript-vim'
   Plug 'Lokaltog/vim-easymotion'
+  Plug 'luochen1990/rainbow'
   Plug 'majutsushi/tagbar'
   Plug 'MarcWeber/vim-addon-mw-utils'
   Plug 'martinda/Jenkinsfile-vim-syntax'
@@ -152,6 +153,7 @@ call plug#end()
 set t_Co=256 " Take advantage of 256 color terminal
 set background=dark " Work in the dark
 color iceberg
+let g:rainbow_active = 1
 
 ""
 "" Searching (Janus)
