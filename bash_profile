@@ -20,6 +20,8 @@ export PATH=./.bin:./bin:$PATH
 # Add Gimp binaries (interactive batch mode does not work as expected)
 # export PATH=$PATH:/Applications/Gimp.app/Contents/Resources/bin
 
+# Preferred editor
+export EDITOR=nvim
 
 # Go
 export GO111MODULE=on
