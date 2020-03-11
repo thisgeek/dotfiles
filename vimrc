@@ -302,10 +302,11 @@ nmap <leader><leader> :AckFromSearch<space>
 " Deolete-based autocompletion
 " TODO Detect python3 dependency. See https://github.com/Shougo/deoplete.nvim#requirements
 " Auto enable deoplete
-let g:deoplete#enable_at_startup = 1
-" async-clj-omni with deoplete
-call deoplete#custom#option('keyword_patterns', {'clojure': '[\w!$%&*+/:<=>?@\^_~\-\.#]*'})
-
+if has("autocmd") && has("nvim")
+  au FileType clojure let g:deoplete#enable_at_startup = 1
+  " async-clj-omni with deoplete
+  au FileType clojure call deoplete#custom#option('keyword_patterns', {'clojure': '[\w!$%&*+/:<=>?@\^_~\-\.#]*'})
+endif
 
 ""
 "" Uncategorized
