@@ -26,9 +26,6 @@ if has("autocmd")
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} setf markdown
   au FileType markdown setlocal wrap linebreak textwidth=72 nolist
 
-  " Limit text width for wiki files
-  au BufRead,BufNewFile *.wiki set textwidth=80
-
   " Detect nginx configurations
   au BufRead,BufNewFile */nginx/* set ft=nginx
 
@@ -147,7 +144,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-vinegar'
   Plug 'vim-airline/vim-airline'
-  Plug 'vim-scripts/vimwiki'
   Plug 'w0rp/ale'
 call plug#end()
 
@@ -226,15 +222,6 @@ nmap <leader>gsu :GSetUpstream<CR>
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config from conflicting with fugitive
 let g:gist_post_private = 1                              " Make private gists by default
-
-""
-"" Vimwiki
-""
-"" TODO fix template path for primary wiki
-" Load vimwiki configuration
-if filereadable(expand("~/.vimwikirc"))
-  source ~/.vimwikirc
-endif
 
 ""
 "" CtrlP
