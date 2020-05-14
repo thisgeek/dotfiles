@@ -194,6 +194,18 @@ augroup plugin-delimitMate
 augroup END
 
 ""
+"" Git Commits
+""
+" Check spelling https://stackoverflow.com/a/57690465/199644
+autocmd FileType gitcommit setlocal spell
+
+""
+"" Pull Requests
+""
+" Check spelling https://stackoverflow.com/a/57690465/199644
+autocmd BufRead PULLREQ_EDITMSG setlocal spell
+
+""
 "" Fugitive (Janus)
 ""
 nmap <leader>gb :Gblame<CR>
