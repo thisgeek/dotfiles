@@ -12,6 +12,8 @@ autoload -U compinit && compinit
 bindkey -v
 bindkey '^R' history-incremental-pattern-search-backward
 
+PROMPT="%1~ > "
+
 # Initialize chromium from shell (in order to take advantage of options)
 # Alt: https://stackoverflow.com/questions/26388405/chrome-disable-ssl-checking-for-sites#comment96711735_46702756
 # Alt: Cargo cult the configurations used by selenium web driver. See link above.
