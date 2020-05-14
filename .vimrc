@@ -3,6 +3,9 @@
 ""
 "" A .vimrc that uses VimPlug and borrows heavily from Janus.
 ""
+"" A "flamen" is an ancient Roman priest. An absence of any flamen is meant to
+"" suggest the absence of any formal ties to the official maintainers of Janus.
+""
 
 ""
 "" Basic Setup
