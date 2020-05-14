@@ -246,26 +246,18 @@ nmap <leader>pb :CtrlPBuffer<CR>
 ""
 "" ALE
 ""
-if glob('.eslintrc.*') != ''
-  let g:ale_linters = { 'javascript': ['eslint','flow'], }
-elseif glob('.prettierrc.js') != ''
-  let g:ale_fixers = { 'javascript': ['prettier'], 'typescript': ['prettier'] }
-  let g:ale_fix_on_save = 1
-else
-  let g:ale_linters = { 'javascript': ['standard','flow'], }
-endif
-let g:ale_javascript_standard_executable = 'semistandard'
 
-" Use tsserver to support ALEGoToDefinition in all javascript
-if executable("tsserver") " TODO npx tsserver?
-  let g:ale_completion_enabled = 1
-else
-  " echom "tsserver not installed"
-endif
+" Only have eyes for prettier
+" Ref: https://prettier.io/docs/en/configuration.html
+" Ref: https://prettier.io/docs/en/vim.html#alehttpsgithubcomdense-analysisale
+" See also: https://prettier.io/docs/en/vim.html#coc-prettierhttpsgithubcomneoclidecoc-prettier
+let g:ale_linters_explicit = 1
+let g:ale_fixers = { 'javascript': ['prettier'] }
+let g:ale_fix_on_save = 1
 
+" Jump and look quickly
 nmap <Leader>ad  <Plug>(ale_go_to_definition)
 nmap <Leader>af  <Plug>(ale_find_references)
-" TODO Map keys to go to definition in split (or vsplit)
 
 ""
 "" Javascript
