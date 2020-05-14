@@ -11,3 +11,10 @@ autoload -U compinit && compinit
 # But Ctrl-R is easier to type quickly than stretching for the esc key
 bindkey -v
 bindkey '^R' history-incremental-pattern-search-backward
+
+# Initialize chromium from shell (in order to take advantage of options)
+# Alt: https://stackoverflow.com/questions/26388405/chrome-disable-ssl-checking-for-sites#comment96711735_46702756
+# Alt: Cargo cult the configurations used by selenium web driver. See link above.
+alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
+alias chrome="open -a Google\ Chrome --args"
+alias proxy-chrome="chromium --ignore-certificate-errors --ignore-urlfetcher-cert-requests --proxy-server=http://localhost:9898 --proxy-bypass-list='<-loopback>'"
