@@ -303,6 +303,9 @@ if has("autocmd")
   au FileType clojure set textwidth=80
   au FileType clojure set colorcolumn=+1
   au FileType clojure let g:rainbow_active = 1
+  " Support block comment continuation
+  " References https://vimhelp.org/change.txt.html#fo-table
+  au FileType clojure set formatoptions+=o
 
   if has("nvim")
     au FileType clojure let g:deoplete#enable_at_startup = 1
