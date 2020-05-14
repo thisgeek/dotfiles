@@ -67,7 +67,7 @@ set nofoldenable                " Don't fold code by default
 command! -nargs=* Wrap set wrap linebreak nolist
 
 " Disable autoindentation (http://bit.ly/IQKws0)
-command DisableAutoIndent setl noai nocin nosi inde=
+command! DisableAutoIndent setl noai nocin nosi inde=
 nmap <silent> <leader>ii :DisableAutoIndent<CR>
 
 ""
@@ -219,7 +219,7 @@ nmap <leader>gp :Git push<CR>
 nmap <leader>gfp :Git push -f<CR>
 
 " Shortcut for saving the current branch to origin
-command GSetUpstream execute "Git push -u origin" FugitiveHead()
+command! GSetUpstream execute "Git push -u origin" FugitiveHead()
 nmap <leader>gsu :GSetUpstream<CR>
 
 " TODO how to get current branch name
@@ -323,7 +323,7 @@ map Y y$
 map Q <Nop>
 
 " Clear the last used search pattern
-command ClearSearch let @/ = ''
+command! ClearSearch let @/ = ''
 nmap <silent> <leader>hc :ClearSearch<CR>
 
 " Shortcut common directory exploration commands
