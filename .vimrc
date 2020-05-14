@@ -83,8 +83,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'chriskempson/base16-vim'
   Plug 'clojure-vim/async-clj-omni'
   " TODO Swich to radenling/vim-dispatch-neovim
-  " Alternative to jack-in
-  " Plug 'tpope/salve'
+  Plug 'tpope/vim-salve'
+  " Alternative cider-nrepl support
+  " Plus 'clojure-vim/vim-jack-in'
   Plug 'cocopon/iceberg.vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'editorconfig/editorconfig-vim'
