@@ -204,6 +204,9 @@ autocmd FileType gitcommit setlocal spell
 ""
 " Check spelling https://stackoverflow.com/a/57690465/199644
 autocmd BufRead PULLREQ_EDITMSG setlocal spell
+" Break lines https://vim.fandom.com/wiki/Word_wrap_without_line_breaks
+autocmd BufRead PULLREQ_EDITMSG set linebreak
+autocmd BufRead PULLREQ_EDITMSG set wrap
 
 ""
 "" Fugitive (Janus)
