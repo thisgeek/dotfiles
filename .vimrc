@@ -157,7 +157,6 @@ call plug#end()
 set t_Co=256 " Take advantage of 256 color terminal
 set background=dark " Work in the dark
 color iceberg
-let g:rainbow_active = 1
 
 ""
 "" Searching (Janus)
@@ -310,6 +309,7 @@ if has("autocmd") && has("nvim")
   au FileType clojure let g:deoplete#enable_at_startup = 1
   " async-clj-omni with deoplete
   au FileType clojure call deoplete#custom#option('keyword_patterns', {'clojure': '[\w!$%&*+/:<=>?@\^_~\-\.#]*'})
+  au FileType clojure let g:rainbow_active = 1
 endif
 
 ""
