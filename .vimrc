@@ -125,7 +125,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'telamon/vim-color-github'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'thinca/vim-visualstar'
-  Plug 'tommcdo/vim-fubitive'
   Plug 'tomtom/tlib_vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-dispatch'
