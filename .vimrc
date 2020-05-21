@@ -94,7 +94,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'guns/vim-sexp'
   " Alternative to Parens vim-sexp
   " Plug 'eraserhd/parinfer-rust'
-  Plug 'junegunn/goyo.vim'
+  Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
   Plug 'leafgarland/typescript-vim'
   Plug 'Lokaltog/vim-easymotion'
   Plug 'luochen1990/rainbow'
