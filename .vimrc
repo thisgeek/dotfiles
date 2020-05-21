@@ -183,6 +183,7 @@ set directory^=~/.vim/_temp//      " where to put swap files.
 ""
 "" DelimitMate
 ""
+let delimitMate_excluded_ft = "clj,cljs,edn"
 augroup plugin-delimitMate
   autocmd!
   " Configure better trip-tic behavior for markdown
