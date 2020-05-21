@@ -111,7 +111,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'plasticboy/vim-markdown'
   Plug 'Raimondi/delimitMate'
-  Plug 'rgarver/Kwbd.vim'
+  Plug 'rgarver/Kwbd.vim' " Keep window on buffer delete
   Plug 'rhysd/devdocs.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'SevereOverfl0w/vim-replant', { 'do': ':UpdateRemotePlugins' }
