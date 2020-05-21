@@ -132,7 +132,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'radenling/vim-dispatch-neovim'
   endif
   Plug 'tpope/vim-eunuch'
-  Plug 'tpope/vim-fireplace'
+  Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
   " 'Modern' alternative REPL to fireplace
   " Plug 'Olical/conjure'
   Plug 'tpope/vim-fugitive'
