@@ -105,6 +105,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mattn/webapi-vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'michaeljsmith/vim-indent-object'
+  Plug 'mustache/vim-mustache-handlebars'
   Plug 'iamFIREcracker/ack.vim', { 'branch': 'async-support' }
   Plug 'mmalecki/vim-node.js'
   Plug 'othree/html5.vim'
