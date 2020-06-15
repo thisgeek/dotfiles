@@ -10,11 +10,12 @@
 ""
 "" Basic Setup
 ""
-let mapleader = "\<Space>"  " Bring Space to your Leader
-set number                  " Show line numbers
-set ruler                   " Show line and column number
-syntax enable               " Turn on syntax highlighting allowing local overrides
-set wildmode=longest,list   " bash style tab completion
+let mapleader = "\<Space>"       " Bring Space to your Leader
+let maplocalleader = "\<Space>"  " And support your local providers
+set number                       " Show line numbers
+set ruler                        " Show line and column number
+syntax enable                    " Turn on syntax highlighting allowing local overrides
+set wildmode=longest,list        " bash style tab completion
 
 ""
 "" Identify Syntaxes
