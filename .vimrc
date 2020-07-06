@@ -135,8 +135,7 @@ call plug#begin('~/.vim/plugged')
   endif
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-  " 'Modern' alternative REPL to fireplace
-  " Plug 'Olical/conjure'
+  Plug 'Olical/conjure', { 'for': 'clojure' }
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-pathogen'
   Plug 'tpope/vim-ragtag'
@@ -163,6 +162,10 @@ set hlsearch    " highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
+" From https://blog.kdheepak.com/three-built-in-neovim-features.html#live-substitution
+if has('nvim')
+  set inccommand=split
+endif
 
 ""
 "" Wild settings (Janus)
