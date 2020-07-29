@@ -88,7 +88,9 @@ call plug#begin('~/.vim/plugged')
   " Alternative cider-nrepl support
   " Plus 'clojure-vim/vim-jack-in'
   Plug 'cocopon/iceberg.vim'
-  Plug 'ctrlpvim/ctrlp.vim'
+  " Plug 'ctrlpvim/ctrlp.vim'
+  Plug '/usr/local/opt/fzf'
+  Plug 'pbogut/fzf-mru.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ervandew/supertab'
   Plug 'freitass/todo.txt-vim'
@@ -242,16 +244,15 @@ command! GSetUpstream execute "Git push -u origin" FugitiveHead()
 nmap <leader>gsu :GSetUpstream<CR>
 
 " TODO how to get current branch name
+" TODO in mergetool: show message when there are no more conflicts
 
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config from conflicting with fugitive
 let g:gist_post_private = 1                              " Make private gists by default
 
 ""
-"" CtrlP
+"" fzf
 ""
-" Use a git listing for ctrlp index when inside a repository
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -o --exclude-standard -c']
-nmap <leader>pb :CtrlPBuffer<CR>
+map <c-p> :FZF<CR>
 
 ""
 "" ALE
