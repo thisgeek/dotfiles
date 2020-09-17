@@ -158,6 +158,15 @@ set background=dark " Work in the dark
 color iceberg
 
 ""
+"" Rainbow
+""
+let g:rainbow_active = 1
+let g:rainbow_conf = { 'separately': {
+      \ 'clojure': "default",
+      \ '*': 0
+      \} }
+
+""
 "" Searching (Janus)
 ""
 set hlsearch    " highlight matches
@@ -311,7 +320,6 @@ nmap <leader><leader> :AckFromSearch<space>
 if has("autocmd")
   au FileType clojure set textwidth=80
   au FileType clojure set colorcolumn=+1
-  au FileType clojure let g:rainbow_active = 1
   " Support block comment continuation
   " References https://vimhelp.org/change.txt.html#fo-table
   au FileType clojure set formatoptions+=o
