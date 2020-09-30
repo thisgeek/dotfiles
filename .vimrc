@@ -89,7 +89,7 @@ call plug#begin('~/.vim/plugged')
   " Plus 'clojure-vim/vim-jack-in'
   Plug 'cocopon/iceberg.vim'
   " Plug 'ctrlpvim/ctrlp.vim'
-  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'pbogut/fzf-mru.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ervandew/supertab'
