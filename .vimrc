@@ -259,6 +259,11 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config fr
 let g:gist_post_private = 1                              " Make private gists by default
 
 ""
+"" GitGutter
+""
+let g:gitgutter_preview_win_floating = 0
+
+""
 "" fzf
 ""
 map <c-p> :FZF<CR>
