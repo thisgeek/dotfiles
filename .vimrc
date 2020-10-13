@@ -125,6 +125,7 @@ call plug#begin('~/.vim/plugged')
   endif
   " Alternative to deoplete
   " Plug 'neoclide/coc.nvim'
+  Plug 'shmup/vim-sql-syntax'
   Plug 'sjl/gundo.vim'
   Plug 'telamon/vim-color-github'
   Plug 'terryma/vim-multiple-cursors'
