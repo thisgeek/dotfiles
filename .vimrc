@@ -35,6 +35,8 @@ if has("autocmd")
   au BufRead,BufNewFile dockerfile set ft=dockerfile
 
   au BufRead,BufNewFile *.tsx set ft=typescript
+
+  au BufRead,BufNewFile Taskfile.* setf yaml
 endif
 
 ""
