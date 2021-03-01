@@ -20,3 +20,6 @@ PROMPT="%1~ > "
 alias chromium="/Applications/Chromium.app/Contents/MacOS/Chromium"
 alias chrome="open -a Google\ Chrome --args"
 alias proxy-chrome="chromium --ignore-certificate-errors --ignore-urlfetcher-cert-requests --proxy-server=http://localhost:9898 --proxy-bypass-list='<-loopback>'"
+
+# Support pgp encryption over teletype
+export GPG_TTY=$(tty)
