@@ -23,3 +23,6 @@ alias proxy-chrome="chromium --ignore-certificate-errors --ignore-urlfetcher-cer
 
 # Support pgp encryption over teletype
 export GPG_TTY=$(tty)
+
+# Include fuzzy finder completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
