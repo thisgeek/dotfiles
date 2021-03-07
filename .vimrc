@@ -222,6 +222,8 @@ augroup END
 autocmd FileType gitcommit setlocal spell
 " https://vi.stackexchange.com/questions/3990/ignore-urls-and-email-addresses-in-spell-file
 autocmd FileType gitcommit :syn match UrlNoSpell "\w\+:\/\/[^[:space:]]\+" contains=@NoSpell
+" Uses regex from https://vi.stackexchange.com/a/22161/22505
+autocmd FileType gitcommit :syn match MDCodeSpanNoSpell "\v([`]).{-}[^\\]\1" contains=@NoSpell
 
 ""
 "" Pull Requests
