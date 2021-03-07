@@ -92,6 +92,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'cocopon/iceberg.vim'
   " Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'jxnblk/vim-mdx-js'
   Plug 'pbogut/fzf-mru.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ervandew/supertab'
