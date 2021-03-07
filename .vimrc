@@ -344,6 +344,13 @@ if has("autocmd")
 endif
 
 ""
+"" Goyo (for markdown)
+""
+" Based on https://github.com/junegunn/goyo.vim/issues/198
+autocmd! User GoyoEnter nested set eventignore=FocusGained
+autocmd! User GoyoLeave nested set eventignore=
+
+""
 "" Uncategorized
 ""
 
