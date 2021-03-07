@@ -240,7 +240,7 @@ autocmd BufRead PULLREQ_EDITMSG set wrap
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
-nmap <leader>gc :Gcommit<CR>
+nmap <leader>gc :Git commit<CR>
 
 " Shortcut to load commit history in quickfix
 nmap <leader>gl :Glog<CR>
