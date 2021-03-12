@@ -1,0 +1,21 @@
+; Include the following it your .gitconfig via:
+; git config --global include.path "~/.gitconfig.aliases"
+[alias]
+	graph = !gitgraph
+	trim = "!echo 'Use git gone'"
+  preserve = !git tag branch-archive/$1 $1 && git branch -D
+  is-ancestor = !git merge-base --is-ancestor $1 $2 && echo "Succeeded: $1 is an ancestor of $2" || echo "Failed: No ancestry found for $1 of $2"
+  ; Hash suffix prevents git log from processing arguments after the range.
+  ; See https://stackoverflow.com/a/39523506/199644.
+  ; Breaks support for passing options but retains shell completion.
+  log-feat = "!git log --oneline `git merge-base ${1:-HEAD} ${2:-origin/master}`..${1:HEAD} #"
+  ; From https://stackoverflow.com/a/10598245/199644
+  merge-after = "!git rev-list --merges ${2:-HEAD} --not $1 --reverse"
+  ; From https://koenwoortman.com/git-faster-branch-checkouts-with-fzf/
+  fzf-branch = "!git for-each-ref refs/heads/ refs/remotes --format='%(refname:short)' | fzf"
+  fzf-checkout = "!git fzf-branch | xargs git checkout"
+  fzf-feat = "!git fzf-branch | xargs git log-feat"
+  ; Files added between commits
+  ; git diff --name-only --diff-filter=A master HEAD
+  ; Based on https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
+  gone = ! "git remote prune && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs git branch -D"
