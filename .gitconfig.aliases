@@ -18,4 +18,4 @@
   ; Files added between commits
   ; git diff --name-only --diff-filter=A master HEAD
   ; Based on https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
-  gone = ! "git remote prune && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs git branch -D"
+  gone = ! "git remote prune ${1:-origin} && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs git branch -D"
