@@ -2,7 +2,6 @@
 ; git config --global include.path "~/.gitconfig.aliases"
 [alias]
   graph = !gitgraph
-  trim = "!echo 'Use git gone'"
   preserve = !git tag branch-archive/$1 $1 && git branch -D
   is-ancestor = !git merge-base --is-ancestor $1 $2 && echo "Succeeded: $1 is an ancestor of $2" || echo "Failed: No ancestry found for $1 of $2"
   ; Hash suffix prevents git log from processing arguments after the range.
@@ -19,3 +18,4 @@
   ; git diff --name-only --diff-filter=A master HEAD
   ; Based on https://www.erikschierboom.com/2020/02/17/cleaning-up-local-git-branches-deleted-on-a-remote/
   gone = ! "git remote prune ${1:-origin} && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs git branch -D"
+  trim = gone
