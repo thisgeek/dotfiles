@@ -37,6 +37,8 @@ if has("autocmd")
   au BufRead,BufNewFile *.tsx set ft=typescript
 
   au BufRead,BufNewFile Taskfile.* setf yaml
+
+  au BufRead,BufNewFile .gitconfig* setf gitconfig
 endif
 
 ""
