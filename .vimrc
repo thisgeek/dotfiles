@@ -281,13 +281,9 @@ map <c-p> :FZF<CR>
 ""
 "" ALE
 ""
-
-" Only have eyes for prettier
-" Ref: https://prettier.io/docs/en/configuration.html
-" Ref: https://prettier.io/docs/en/vim.html#alehttpsgithubcomdense-analysisale
-" See also: https://prettier.io/docs/en/vim.html#coc-prettierhttpsgithubcomneoclidecoc-prettier
 let g:ale_linters_explicit = 1
-let g:ale_fixers = { 'javascript': ['prettier'] }
+let g:ale_linters = { 'javascript': ['standard'] }
+let g:ale_fixers = { 'javascript': ['standard'] }
 let g:ale_fix_on_save = 1
 
 " Jump and look quickly
