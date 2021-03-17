@@ -85,7 +85,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'c9s/tinyurl.vim'
   Plug 'chr4/nginx.vim'
   Plug 'chrisbra/csv.vim'
-  Plug 'chriskempson/base16-vim'
   Plug 'clojure-vim/async-clj-omni'
   " TODO Swich to radenling/vim-dispatch-neovim
   Plug 'tpope/vim-salve'
