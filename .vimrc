@@ -271,6 +271,8 @@ let g:gist_post_private = 1                              " Make private gists by
 "" GitGutter
 ""
 let g:gitgutter_preview_win_floating = 0
+" https://github.com/airblade/vim-gitgutter#when-signs-take-a-few-seconds-to-appear
+set updatetime=300
 
 ""
 "" fzf
