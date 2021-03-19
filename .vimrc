@@ -132,6 +132,7 @@ call plug#begin('~/.vim/plugged')
   " Plug 'neoclide/coc.nvim'
   Plug 'shmup/vim-sql-syntax'
   Plug 'sjl/gundo.vim'
+  Plug 'stsewd/fzf-checkout.vim'
   Plug 'styled-components/vim-styled-components'
   Plug 'telamon/vim-color-github'
   Plug 'terryma/vim-multiple-cursors'
