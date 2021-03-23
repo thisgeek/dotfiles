@@ -155,6 +155,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-vinegar'
   Plug 'vim-airline/vim-airline'
+  Plug 'voldikss/vim-search-me'
   Plug 'w0rp/ale'
 call plug#end()
 
@@ -350,6 +351,14 @@ endif
 " Based on https://github.com/junegunn/goyo.vim/issues/198
 autocmd! User GoyoEnter nested set eventignore=FocusGained
 autocmd! User GoyoLeave nested set eventignore=
+
+""
+"" Search Me
+""
+" https://github.com/voldikss/vim-browser-search#keymappings
+nmap <silent> <Leader>s <Plug>SearchNormal
+vmap <silent> <Leader>s <Plug>SearchVisual
+let g:browser_search_default_engine = 'duckduckgo'
 
 ""
 "" Uncategorized
