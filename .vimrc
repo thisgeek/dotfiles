@@ -345,6 +345,17 @@ if has("autocmd")
   endif
 endif
 
+" From sexp doc:
+" Clojure:
+"   Use the FireplacePrint operator from fireplace.vim [2] to evaluate
+"   the current top-level compound form, compound form, or element
+"   without moving the cursor.
+nmap <Leader>F <Plug>FireplacePrint<Plug>(sexp_outer_top_list)``
+nmap <Leader>f <Plug>FireplacePrint<Plug>(sexp_outer_list)``
+nmap <Leader>e <Plug>FireplacePrint<Plug>(sexp_inner_element)``
+
+let g:sexp_enable_insert_mode_mappings = 0
+
 ""
 "" Goyo (for markdown)
 ""
