@@ -282,6 +282,11 @@ set updatetime=300
 map <c-p> :FZF<CR>
 
 ""
+"" fzf-checkout
+""
+nmap <Leader>zb :GBranch<CR>
+
+""
 "" ALE
 ""
 let g:ale_linters_explicit = 1
