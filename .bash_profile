@@ -30,8 +30,10 @@ export PATH=$PATH:$GOPATH/bin
 
 # Private
 
-# Load API keys
-# if [ -f ~/.bash.keys ]; then . ~/.bash.keys; fi
+# Load private env
+if [ -f ~/.env_private ]; then \
+  set -a; . ~/env_private; set a+;
+fi
 
 # Aliases
 
