@@ -270,6 +270,15 @@ nmap <leader>gsu :GSetUpstream<CR>
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']  " Keep editor config from conflicting with fugitive
 let g:gist_post_private = 1                              " Make private gists by default
 
+" Show the fugitive log for the current feature branch
+function MergeBase()
+  " TODO support branch arg
+  let commit = execute("Git merge-base HEAD origin/master")
+  return strtrans(substitute(commit, '\n\+', '', ''))
+endfunction
+command! GlogMergeBase execute "Gclog " . MergeBase() . "..HEAD"
+nmap <leader>gm :GlogMergeBase<CR>
+
 ""
 "" GitGutter
 ""
