@@ -248,8 +248,8 @@ nmap <leader>gd :Gdiff<CR>
 nmap <leader>gc :Git commit<CR>
 
 " Shortcut to load commit history in quickfix
-nmap <leader>gl :Glog<CR>
-vmap <leader>gl :Glog<CR>
+nmap <leader>gl :Gclog<CR>
+vmap <leader>gl :Gclog<CR>
 
 " Shortcut browsing in the repo hosting provider
 nmap <leader>gh :Gbrowse<CR>
