@@ -243,7 +243,7 @@ autocmd BufRead PULLREQ_EDITMSG set wrap
 "" Fugitive (Janus)
 ""
 nmap <leader>gb :Gblame<CR>
-nmap <leader>gs :Gstatus<CR>
+nmap <leader>gs :Git<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gc :Git commit<CR>
 
