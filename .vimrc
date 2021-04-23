@@ -76,6 +76,8 @@ nmap <silent> <leader>ii :DisableAutoIndent<CR>
 "" Install plugins
 "" See https://vimawesome.com for more
 ""
+"" TODO https://github.com/junegunn/vim-plug/wiki/faq#managing-dependencies
+""
 call plug#begin('~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'alunny/pegjs-vim'
@@ -93,9 +95,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'cocopon/iceberg.vim'
   " Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
+        \ | Plug 'junegunn/fzf.vim'
+        \ | Plug 'pbogut/fzf-mru.vim'
+        \ | Plug 'stsewd/fzf-checkout.vim'
   Plug 'jxnblk/vim-mdx-js'
-  Plug 'pbogut/fzf-mru.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'ervandew/supertab'
   Plug 'freitass/todo.txt-vim'
@@ -133,7 +136,6 @@ call plug#begin('~/.vim/plugged')
   " Plug 'neoclide/coc.nvim'
   Plug 'shmup/vim-sql-syntax'
   Plug 'sjl/gundo.vim'
-  Plug 'stsewd/fzf-checkout.vim'
   Plug 'styled-components/vim-styled-components'
   Plug 'telamon/vim-color-github'
   Plug 'terryma/vim-multiple-cursors'
