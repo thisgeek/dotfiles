@@ -93,7 +93,6 @@ call plug#begin('~/.vim/plugged')
   " Alternative cider-nrepl support
   " Plus 'clojure-vim/vim-jack-in'
   Plug 'cocopon/iceberg.vim'
-  " Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
         \ | Plug 'junegunn/fzf.vim'
         \ | Plug 'pbogut/fzf-mru.vim'
@@ -289,14 +288,39 @@ let g:gitgutter_preview_win_floating = 0
 set updatetime=300
 
 ""
-"" fzf
+"" FZF
 ""
-map <c-p> :FZF<CR>
 
-""
-"" fzf-checkout
-""
+" Explicitly include fzf in the runtime path, as recommended by brew install.
+" Disabled as possibly unecessary so long as vim-plug handles `fzf#install()`.
+" set rtp+=/usr/local/opt/fzf
+
+" What was once Ctrl-P is now fzf.
+map <c-p> :GFiles<CR>
+" TODO Restore 'smart' finding functionality with fzf-mru or similar.
+
+" TODO Support listing files relative to the path from the current buffer.
+" Experimental.
+command! -complete=dir -nargs=* Groot
+      \ call fzf#run(fzf#wrap({
+      \   'source': 'git rev-parse --show-toplevel | xargs git ls-files',
+      \   'dir': <q-args>
+      \ }))
+
+" Mappings for fzf-checkout
 nmap <Leader>zb :GBranch<CR>
+
+" Fallback: Fuzzy-finder depends on the environment, which breaks the
+" portability of this configuration. The following offers an alternative if
+" fuzzy-finder is not available.
+"
+" Caveats: Tab completion via path will have terrible performance in
+" sufficiently large codebases. If troubleshooting, remember that any behavior
+" is likely affected by all other wild settings.
+"
+" Experimental. If insufficient, consider installing ctrlp.vim.
+set path+=**
+set wildmenu
 
 ""
 "" ALE
