@@ -331,8 +331,18 @@ let g:ale_fixers = { 'javascript': ['standard'] }
 let g:ale_fix_on_save = 1
 
 " Jump and look quickly
+
+" Use tsserver to support ALE features in javascript
+if executable("tsserver")
+  let g:ale_completion_enabled = 1
+  let g:ale_linters = { 'javascript': ['standard', 'tsserver'] }
+else
+  echom "tsserver not installed"
+endif
+
 nmap <Leader>ad  <Plug>(ale_go_to_definition)
 nmap <Leader>af  <Plug>(ale_find_references)
+nmap <Leader>ar  <Plug>(ale_rename)
 
 ""
 "" Javascript
