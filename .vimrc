@@ -253,8 +253,8 @@ nmap <leader>gl :Gclog<CR>
 vmap <leader>gl :Gclog<CR>
 
 " Shortcut browsing in the repo hosting provider
-nmap <leader>gh :Gbrowse<CR>
-vmap <leader>gh :Gbrowse<CR>
+nmap <leader>gh :GBrowse<CR>
+vmap <leader>gh :GBrowse<CR>
 
 " Shortcut to push and force push
 nmap <leader>gp :Git push<CR>
